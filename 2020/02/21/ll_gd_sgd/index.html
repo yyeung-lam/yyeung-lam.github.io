@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://thumbs.gfycat.com/TediousReasonableBadger-size_restricted.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Gradient Descent, Stochastic Gradient Descent in Linear Regression</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="Linear-Regression-Gradient-Descent-and-Stochastic-Gradient-Descent"><a href="#Linear-Regression-Gradient-Descent-and-Stochastic-Gradient-Descent" class="headerlink" title="Linear Regression, Gradient Descent and Stochastic Gradient Descent"></a>Linear Regression, Gradient Descent and Stochastic Gradient Descent</h2><h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ul>
+<li><p><input disabled="" type="checkbox">  Apply gradient descent to optimize a function</p>
+</li>
+<li><p><input disabled="" type="checkbox">  Apply stochastic gradient descent (SGD) to optimize a function</p>
+</li>
+<li><p><input disabled="" type="checkbox">  Apply knowledge of zero derivatives to identify a closed form solution (if one exists) to an optimization problem</p>
+</li>
+<li><p><input disabled="" type="checkbox">  Distinguish between convex, concave, and nonconvex functions</p>
+</li>
+<li><p><input disabled="" type="checkbox">  Obtain the gradient (and Hessian) of a (twice) differentiable function</p>
+</li>
+<li><p><input disabled="" type="checkbox">  Design k-NN Regression and Decision Tree<br>Regression</p>
+</li>
+<li><p><input disabled="" type="checkbox">  Implement learning for Linear Regression using three optimization techniques:</p>
+<ul>
+<li><input disabled="" type="checkbox"> closed form</li>
+<li><input disabled="" type="checkbox"> gradient descent</li>
+<li><input disabled="" type="checkbox"> stochastic gradient descent</li>
+</ul>
+</li>
+<li><p><input disabled="" type="checkbox">  Choose a Linear Regression optimization technique that is appropriate for a particular dataset by analyzing the tradeoff of computational complexity vs. convergence speed</p>
+</li>
+<li><p><input disabled="" type="checkbox">  Distinguish the three sources of error identified by the bias-variance decomposition: bias, variance, and irreducible error ?</p>
+</li>
+</ul>
+<hr>
+<h4 id="Regression"><a href="#Regression" class="headerlink" title="Regression"></a>Regression</h4><p><strong>Def</strong>:</p>
+<ul>
+<li>$\mathbf{x}^{(i)}\in\mathbb{R}^M$, input, features</li>
+<li>$y^{(i)}\in \mathbb{R}$, output, values</li>
+<li>$D = {(x^{(i)},y^{(i)})}_{i=1}^N$</li>
+</ul>
+<p><strong>Linear Functions</strong> != decision boundaries<br>General form: $\mathbf{w}^T\mathbf{x}+b = y$</p>
+<ul>
+<li>$\mathbf{w}\in\mathbb{R}^M$</li>
+<li>$b\in \mathbb{R}$</li>
+</ul>
+<p>(Remark: linear decision boundary is different!) $y=sign(\mathbf{w}^T\mathbf{x}+b)$</p>
+<h4 id="Linear-Regression-as-function-approximation"><a href="#Linear-Regression-as-function-approximation" class="headerlink" title="Linear Regression (as function approximation)"></a>Linear Regression (as function approximation)</h4><ol>
+<li>Data, unknown $\mathbf{x}^{(i)}$ and $y^{(i)}$</li>
+<li>Hypothesis space $H = {h_{\theta}:h_{\theta}(\mathbf{x} ) = \mathbf{\theta}^T\mathbf{x}, \theta\in\mathbb{R}^M}$</li>
+<li>Choose an objectives function: $MSE(\theta)$</li>
+<li>Solve unconstrained optimization method by<ul>
+<li>gradient descent</li>
+<li>closed form</li>
+<li>stochastic gradient descent</li>
+<li>…<br>solve for $\hat{\theta} = \underset{\theta}{\mathrm{argmin}}J(\theta)$</li>
+</ul>
+</li>
+<li>Test, given new $\mathbf{x}$, make prediction $\hat{y}$<br>$$\hat{y} = \hat{\theta}^T\mathbf{x}$$</li>
+</ol>
+<h4 id="Closed-form"><a href="#Closed-form" class="headerlink" title="Closed form"></a>Closed form</h4><p>Only applies to <strong>convex</strong> functions</p>
+<p><strong>Def</strong>: Function $f:\mathbb{R}^M\rightarrow \mathbb{R}$ is convex if $\forall\mathbf{x}_1,\mathbf{x}_2\in \mathbb{R}^M, 0\leq t\leq 1$:<br>$$f(t\mathbf{x}_1+(1-t)\mathbf{x_2}) \leq tf(\mathbf{x}_1) + (1-t)f(\mathbf{x}_2)$$</p>
+<ul>
+<li>convex function -&gt; multiple local = global minimum</li>
+<li>strictly convex function -&gt; unique global minimum</li>
+</ul>
+<p><strong>Normal Equation of loss function (MSE)</strong><br>$$\hat{\theta} = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{Y}$$</p>
+<p><strong>Cons</strong>: Computation complexity ~ $O(M^2N)$, doesn’t work on invertible $(\mathbf{X}^T\mathbf{X})$</p>
+<h4 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h4><p>The gradient of objective function $J$:</p>
+<p>$$\nabla J(\vec{\theta}) = \begin{bmatrix} \frac{\partial J(\vec{\theta})}{\partial \theta_1}\ \frac{\partial J(\vec{\theta})}{\partial \theta_2} \ … \ \frac{\partial J(\vec{\theta})}{\partial \theta_M} \end{bmatrix}$$</p>
+<p><strong>Pros</strong>: simple, effective, scalable. <strong>Cons</strong>: Only applies to differentialble/smooth functions, might find local minimum only</p>
+<p><strong>Alogorithm</strong></p>
+<ol>
+<li>Choose initial point $\theta^{(0)}$<ul>
+<li>zero</li>
+<li>randomly</li>
+</ul>
+</li>
+<li>Repeat:<ul>
+<li>compute gradient: $\vec{g} = \nabla J(\vec{\theta})$</li>
+<li>choose step size $\gamma &gt; 0$<ul>
+<li>fixed value</li>
+<li>exact line search, backtracking line search</li>
+<li>schedule $\gamma_t = \frac{\gamma_0}{(t-1)\gamma_0+1}$</li>
+</ul>
+</li>
+<li>update parameter $\theta \leftarrow \theta - \gamma \vec{g}$</li>
+</ul>
+</li>
+<li>Return $\theta$ when stopping criterion is met<ul>
+<li>$|\nabla J(\theta)| &lt; \epsilon (\sim 10^{-8})$ (at minimum, it will be $\vec{0}$)</li>
+</ul>
+</li>
+</ol>
+<h4 id="Gradient-descent-for-linear-regression"><a href="#Gradient-descent-for-linear-regression" class="headerlink" title="Gradient descent for linear regression"></a>Gradient descent for linear regression</h4><p>Derivative of $J^{(i)}(\vec{\theta}) = \frac{1}{2}(\vec{\theta}^T\mathbf{x}^{(i)} - y^{(i)})^2$, the $i^{th}$ element of $J$, w.r.t $\theta_k$<br>$$\frac{\partial }{\partial \theta_k}J^{(i)}(\vec{\theta}) = (\vec{\theta}^T\mathbf{x}^{(i)} - y^{(i)})x^{(i)}_k$$</p>
+<p>Derivation of $J(\vec{\theta}) = \frac{\partial }{\partial \theta_k}\sum_{i=1}^NJ^{(i)}(\vec{\theta}) = \sum_{i=1}^N(\vec{\theta}^T\mathbf{x}^{(i)}-y^{(i)})x_k^{(i)}$</p>
+<p>Gradient of $J(\vec{\theta})$,</p>
+<p>$$\sum_{i=1}^N(\vec{\theta}^T\mathbf{x}^{(i)}-y^{(i)})\mathbf{x}^{(i)}$$</p>
+<p><strong>Question:</strong> how is it computed manually?</p>
+<p><strong>Alogorithm</strong><br>compute gradient accoding to $\vec{g} = \nabla J(\vec{\theta}) = \sum_{i=1}^N(\vec{\theta}^T\mathbf{x}^{(i)}-y^{(i)})\mathbf{x}^{(i)}$<br>update parameter $\theta \leftarrow \theta - \gamma \vec{g}$</p>
+<h4 id="Stochastic-Gradient-Descent"><a href="#Stochastic-Gradient-Descent" class="headerlink" title="Stochastic Gradient Descent"></a>Stochastic Gradient Descent</h4><p><strong>Idea</strong>: Update parameter by a uniformly sampled (without replacement) component of (negative) gradient<br>$$i\sim Uniform({1,…,N})$$ do $$\vec{\theta}\leftarrow\vec{\theta} - \gamma\nabla J^{(i)}(\vec{\theta})$$</p>
+<p>$$\nabla J^{(i)}(\vec{\theta}) = (\vec{\theta}^T\mathbf{x}^{(i)} - y^{(i)})\mathbf{x}^{(i)}, \nabla J(\vec{\theta}) = \sum_{i=1}^N\nabla J^{(i)}(\vec{\theta})$$</p>
+<p><strong>Why on average SGD works the same as GD with less computation?</strong></p>
+<p>Let random variable $I \sim Uniform({1,…,N})$, expected value of a randomly chosen $\nabla J^{(i)}(\vec{\theta})$:</p>
+<p>$$\mathbb{E}[\nabla J^{(i)}(\vec{\theta})] = \sum_{i=1}^N\mathbb{P}(I=i)\nabla J^{(i)}(\vec{\theta}) = \frac{1}{N}\sum_{i=1}^N\nabla J^{(i)}(\vec{\theta}) = \nabla J(\vec{\theta})$$</p>
+<p><strong>Complexity per iteration</strong><br>GD: $O(MN)$, SGD: $O(M)$<br>Methods | Steps to Converge     | Computation per iteration<br>—     |   —-                | —<br>GD      |  O(ln$(1/\epsilon$))  |  O(MN)<br>SGD     |  O($1/\epsilon$)      |  O(M)</p>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

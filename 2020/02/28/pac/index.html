@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://i.ytimg.com/vi/tdN5ay_TEHM/maxresdefault.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PAC Learning</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="PAC-Learning"><a href="#PAC-Learning" class="headerlink" title="PAC Learning"></a>PAC Learning</h2><h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> Identify the properties of a learning setting and assumptions required to ensure low generalization error</li>
+<li><input checked="" disabled="" type="checkbox"> Distinguish true error, train error, test error</li>
+<li><input checked="" disabled="" type="checkbox"> Define PAC and explain what it means to be approximately correct and what occurs with high probability</li>
+<li><input checked="" disabled="" type="checkbox"> Apply sample complexity bounds to real-world learning examples</li>
+<li><input checked="" disabled="" type="checkbox"> Distinguish between a large sample and a finite sample analysis</li>
+<li><input checked="" disabled="" type="checkbox"> Theoretically motivate regularization</li>
+</ul>
+<h4 id="Types-of-Error"><a href="#Types-of-Error" class="headerlink" title="Types of Error"></a>Types of Error</h4><ol>
+<li>True Error (expected risk): unknown</li>
+</ol>
+<p>$$R(h) = P_{\mathbf{x}\sim p^∗(\mathbf{x})}(c^∗(\mathbf{x})\neq h(\mathbf{x}))$$</p>
+<ol start="2">
+<li>Train Error (empirical risk): estimate true error</li>
+</ol>
+<p>$$\hat{R}(h) = P_{\mathbf{x}\sim S}(c^∗(\mathbf{x})\neq h(\mathbf{x}))$$</p>
+<p>$$= \frac{1}{N}\sum_{i=1}^N\mathbb{I}(c^∗(\mathbf{x}^{(i)})\neq h(\mathbf{x}^{(i)}))$$</p>
+<p>$$= \frac{1}{N}\sum_{i=1}^N\mathbb{I}(y^{(i)} \neq h(\mathbf{x}^{(i)}))$$</p>
+<p>where $S={\mathbf{x}^{(i)}}_{i=1}^N$ is the training data set (sample), which $\mathbf{x} \sim S$ denoting $\mathbf{x}$ is sampled ($\mathrm{i.i.d}$) from $S$ the empirical distribution. It is also the empirical error of $h$ over the sample $S$ (that is the fraction of examples in $S$ misclassified by $h$)</p>
+<h4 id="Hypotheses-of-Interest"><a href="#Hypotheses-of-Interest" class="headerlink" title="Hypotheses of Interest"></a>Hypotheses of Interest</h4><ul>
+<li>The <strong>true function</strong> $c^∗$ is the one we are trying to learn and that labeled the training data: $y_i = c<br>^∗(x_i)$</li>
+<li>The <strong>expected risk minimizer</strong> $h^∗$ that has the lowest true error</li>
+<li>The <strong>empirical risk minimizer</strong> $\hat{h}$ that has the lowest training error</li>
+</ul>
+<blockquote>
+<p>Is $h^∗ = c^∗$ always? =&gt; No (eg. linear decision boundaries in $\mathcal{H}$)</p>
+</blockquote>
+<p><strong>Hypothesis space:</strong> set of hypothesis $h$ possibly selected by algorithm<br><strong>Concept class:</strong> set of concepts (mappings) $c$ selected by oracle<br><strong>Idea:</strong> The learning algorithm receives sample and selects a hypothesis $h$ from $\mathcal{H}$ approximating $c^∗$.</p>
+<h4 id="Distribution-Learning"><a href="#Distribution-Learning" class="headerlink" title="Distribution Learning"></a>Distribution Learning</h4><p><strong>Idea:</strong> Examples are drawn from fixed (and unknown) distribution over the instance space $\mathcal{H}$</p>
+<p><strong>Assumption:</strong> We hope that what we learn based on training data will carry over to new and unseen testing data, by assuming training data and testing data are drawn from the same distribution</p>
+<p><strong>PAC Criterion:</strong> our learner produces a high accuracy learner with high probability: $$P(|R(h)-\hat{R}(h)|\leq \epsilon) \geq 1- \delta$$ for small positive $\epsilon, \delta$</p>
+<p><strong>Def:</strong> Sample complexity is minimum number of training examples $N$ such that the PAC criterion is satisfied for $\epsilon, \delta$</p>
+<p><strong>Def:</strong> A hypothesis $h\in\mathcal{H}$ is consistent with the training data if $\hat{R}(h) = 0$</p>
+<p><strong>Remark:</strong> With high probability the empirical error converge to an approximation of the true error. This is the idea of <strong>Probably Approximately Correct learning</strong></p>
+<h4 id="Reliable-Case-c-∗-in-mathcal-H"><a href="#Reliable-Case-c-∗-in-mathcal-H" class="headerlink" title="Reliable Case: $c^∗\in \mathcal{H}$"></a>Reliable Case: $c^∗\in \mathcal{H}$</h4><p><strong>Theroem 1 (reliable, finite $|\mathcal{H}|$)</strong> Let $H$ be a finite hypothesis space. Let $D$ be an arbitrary, fixed unknown probability distribution over $X$ and let $c^∗$ be an arbitrary unknown target function. For any $\delta &gt; 0$, if we draw a sample from $D$ of size $N$ then with probability $1-\delta$, all hypotheses $h\in \mathcal{H}$ consistent with the data have $R(h)\leq \epsilon$</p>
+<p>$$N\geq\frac{1}{\epsilon}\bigg[\mathrm{ln}(|\mathcal{H}|) + \mathrm{ln}(\frac{1}{\delta})\bigg]$$</p>
+<p><em>proof</em>: Contrapositive</p>
+<blockquote>
+<ol>
+<li>Assume $k$ “bad” hypotheses $h_1,…,h_k$ with $R(h_i) &gt; \epsilon$ (making a mistake on a randomly chosen example)</li>
+<li>Pick one $h_i$, probability that<ul>
+<li>$h_i$ is consistent with the first training examples: $\leq 1-\epsilon$ (not making a mistake)</li>
+<li>$h_i$ is consistent with $N$ training examples $:\leq (1-\epsilon)^N$</li>
+</ul>
+</li>
+<li>Probability that at least one bad $h_i$ is consistent with $N$ training examples : $\leq k(1-\epsilon)^N$ (Union Bound)</li>
+<li>Fact of exp: $1-x\leq e^{-x}\Rightarrow |\mathcal{H}|(1-\epsilon)^N\leq |\mathcal{H}|e^{-\epsilon N}$</li>
+<li>Calculate $N$ and $\delta$ such that $|\mathcal{H}|e^{-\epsilon N}\leq\delta$</li>
+<li>Solve for $N$, $N\geq \frac{1}{\epsilon}\big[ln(|\mathcal{H}|)+ln(\frac{1}{\delta})\big]$</li>
+<li>Not “bad” scenario: with probability $1-\delta$, $\forall h\in \mathcal{H}$ with $R(h_i)&gt;\epsilon$ also have $\hat{R}(h_i) &gt; 0$<br>Finally, take contrapositive of that, $\forall h \in \mathcal{H}, \hat{R}(h_i) = 0 \Rightarrow R(h_i)\leq\epsilon$ if there are at least $\frac{1}{\epsilon}\big[ln(|\mathcal{H}|)+ln(\frac{1}{\delta})\big]$ training examples</li>
+</ol>
+</blockquote>
+<h4 id="Agnostic-Case-target-concept-c-∗-in-mathcal-H-or-c-∗-not-in-mathcal-H"><a href="#Agnostic-Case-target-concept-c-∗-in-mathcal-H-or-c-∗-not-in-mathcal-H" class="headerlink" title="Agnostic Case: target concept $c^∗ \in \mathcal{H}$ or $c^∗ \not\in\mathcal{H}$"></a>Agnostic Case: target concept $c^∗ \in \mathcal{H}$ or $c^∗ \not\in\mathcal{H}$</h4><p><strong>Theorem 2 (Agnostic, Finite):</strong> The number of labeled training examples are sufficient so that with probability $1-\delta$ for all $h\in\mathcal{H}$ we have that $|R(h)-\hat{R}(h)|\leq \epsilon$ is at least $$N\geq \frac{1}{2\epsilon^2}\bigg[\mathrm{ln}(|\mathcal{H}|) + \mathrm{ln}(\frac{2}{\delta})\bigg]$$</p>
+<p>Hoeffding bounds: for any $\epsilon \in [0,1]$,</p>
+<ol>
+<li>$P(\frac{S}{m}&gt;p+\epsilon) \leq e^{-2m\epsilon^2}$</li>
+<li>$P(\frac{S}{m}&lt;p+\epsilon) \leq e^{-2m\epsilon^2}$</li>
+</ol>
+<h4 id="VC-Dimension-What-if-mathcal-H-is-infinite"><a href="#VC-Dimension-What-if-mathcal-H-is-infinite" class="headerlink" title="VC-Dimension: What if $\mathcal{H}$ is infinite?"></a>VC-Dimension: What if $\mathcal{H}$ is infinite?</h4><p><strong>Def: Shattering</strong><br>$H[S]$ is the set of splittings of dataset $S$ using concept from concept class $H$ (linear separators, circular bounds, etc.). $H$ shatters $S$ if $|H[S]|=2^{|S|}$.<br>$$H(S) = {(c(x_1),…,c(x_m))| c\in\mathcal{H}} ,\ S = {x_1,…,x_m}$$</p>
+<p><strong>Small example:</strong> $\mathcal{H}:$ all circular decision boundaries. $|S| = 7$. Clearly $|H[S]|&lt;2^7$, $S$ is not shattered by $\mathcal{H}$.</p>
+<p><strong>Def: VC-dimension</strong><br>The VC-dimension of a hypothesis space $\mathcal{H}$ is the cardinality of the largest set $S$ that can be shattered by $\mathcal{H}$. If arbitrarily large finite sets can be shattered by $\mathcal{H}$, then $\mathrm{VCdim}(\mathcal{H}) = \infty$<br>To show that $\mathrm{VCDim}(\mathcal{H}) = d$,</p>
+<ol>
+<li>$\exists S\subseteq \mathcal{X}$ such that $|S|=d$ and $\mathcal{H}$ shatters $S$</li>
+<li>$\forall S\subseteq \mathcal{X}$ such that $|S|=d+1$ and $\mathcal{H}$ cannot shatters $S$</li>
+</ol>
+<ul>
+<li>To show 1, find one dataset $S$ with $d$ points, list all configurations of possible labelings of $S$, see if $S$ can be shattered</li>
+<li>To show 2, there exists no set of $d+1$ points that can be shattered</li>
+</ul>
+<p><strong>Examples of Some concept classes</strong></p>
+<ul>
+<li>Finite $H$, $\mathrm{VCDim}(H) \leq \mathrm{log}|H|$</li>
+<li>Infinite $H$, $\mathrm{VCDim}(H) = \infty$</li>
+<li>$H$: thresholds on real number line, $\mathrm{VCDim}(H)=1$</li>
+<li>$H$: $k$ many intervals on real line, $\mathrm{VCDim}(H) = 2k$</li>
+<li>$H:$ linear separators in $\mathbb{R}^n$, $\mathrm{VCDim}(H) = d+1$</li>
+<li>…</li>
+</ul>
+<p><strong>Example: VC-dimension for linear separators</strong><br>$\mathcal{H}:$ linear separators in 2D. $\mathcal{X}:$ full set of all possible points.</p>
+<p><strong>Fact:</strong></p>
+<ul>
+<li>$\mathrm{VCdim}(H)$ of linear separators in $\mathbb{R}^d$ is $d+1$</li>
+<li>$\mathrm{VCdim}(H)$ of union of $k$ intervals on the real line is $2k$</li>
+</ul>
+<h4 id="Realizable-Inifinite-mathcal-H"><a href="#Realizable-Inifinite-mathcal-H" class="headerlink" title="Realizable, Inifinite $\mathcal{H}$"></a>Realizable, Inifinite $\mathcal{H}$</h4><p><strong>Theorem 3:</strong> $$N = O\bigg(\frac{1}{\epsilon}\bigg[VC(\mathcal{H})\mathrm{ln}(\frac{1}{\epsilon}) + \mathrm{ln}(\frac{1}{\delta})\bigg]\bigg)$$ labeled examples are sufficient so that with probability $1-\delta$ all $h\in\mathcal{H}$ with $\hat{R}(h) = 0$ have $R(h) \leq \epsilon$</p>
+<h4 id="Agnostic-Inifinite-mathcal-H"><a href="#Agnostic-Inifinite-mathcal-H" class="headerlink" title="Agnostic, Inifinite $\mathcal{H}$"></a>Agnostic, Inifinite $\mathcal{H}$</h4><p><strong>Theorem 4:</strong> $$N = O\bigg(\frac{1}{\epsilon^2}\bigg[VC(\mathcal{H}) + \mathrm{ln}(\frac{1}{\delta})\bigg]\bigg)$$ labeled examples are sufficient so that with probability $1-\delta$ all $h\in\mathcal{H}$ we have $|R(h)-\hat{R}(h)|\leq \epsilon$</p>
+<h4 id="Statistical-Learning-Theory-Style-Corollary"><a href="#Statistical-Learning-Theory-Style-Corollary" class="headerlink" title="Statistical Learning Theory Style Corollary"></a>Statistical Learning Theory Style Corollary</h4><p><strong>Corollary 1 (realizable, finite $\mathcal{H}$):</strong> Solve for $R(h)$ in theorem 1, we first get $\epsilon \geq \frac{1}{N}\bigg[\mathrm{ln}(|\mathcal{H}|) + \mathrm{ln}(\frac{1}{\delta})\bigg]$,… $$R(h)\leq \frac{1}{N}\bigg[\mathrm{ln}(|\mathcal{H}|)+\mathrm{ln}(\frac{1}{\delta})\bigg]$$</p>
+<p><strong>Corollary 2 (agnostic, finite $\mathcal{H}$):</strong> Solve for $R(h)$ in theorem 2, for some $\delta &gt; 0$ with probability at least $1-\delta$, for any hypotheis $h\in\mathcal{H}$, $$R(h) \leq \hat{R}(h) + \sqrt{\frac{1}{2N}\bigg[\mathrm{ln}(|\mathcal{H}|) + \mathrm{ln}(\frac{2}{\delta})\bigg]}$$</p>
+<p><strong>Corollary 3 (realizable, infinite $\mathcal{H}$):</strong> Solve for $R(h)$ in theorem 3, for some $\delta &gt; 0$ with probability at least $1-\delta$, for any hypotheis $h\in\mathcal{H}$ consistent with data, $$R(h) \leq O\bigg(\frac{1}{N}\bigg[VC(\mathcal{H})\mathrm{ln}(\frac{N}{VC(\mathcal{H})}) + \mathrm{ln}(\frac{1}{\delta})\bigg]\bigg)$$</p>
+<p><strong>Corollary 4 (agnostic, infinite $\mathcal{H}$):</strong> Solve for $R(h)$ in theorem 4, for some $\delta &gt; 0$ with probability at least $1-\delta$, for any hypotheis $h\in\mathcal{H}$, $$R(h) \leq \hat{R}(h) + O\bigg(\sqrt{\frac{1}{N}\bigg[VC(\mathcal{H}) + \mathrm{ln}(\frac{1}{\delta})\bigg]}\bigg)$$</p>
+<h4 id="Motivation-for-Regularization"><a href="#Motivation-for-Regularization" class="headerlink" title="Motivation for Regularization"></a>Motivation for Regularization</h4><p><strong>Idea:</strong> How to trade off low training error and model complexity? -&gt; Regularization</p>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

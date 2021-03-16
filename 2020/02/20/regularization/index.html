@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://laid.delanover.com/wp-content/uploads/2018/01/regularization.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Regularization</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> Engineer appropriate features for a new task</li>
+<li><input checked="" disabled="" type="checkbox"> Use feature selection techniques to identify and remove irrelevant features</li>
+<li><input checked="" disabled="" type="checkbox"> Identify when a model is overfitting</li>
+<li><input checked="" disabled="" type="checkbox"> Add a regularizer to an existing objective in order to combat overfitting</li>
+<li><input checked="" disabled="" type="checkbox"> Explain why we should not regularize the bias term</li>
+<li><input checked="" disabled="" type="checkbox"> Convert linearly inseparable dataset to a linearly separable dataset in higher dimensions</li>
+<li><input checked="" disabled="" type="checkbox"> Describe feature engineering in common application areas</li>
+</ul>
+<h3 id="Feature-Engineering"><a href="#Feature-Engineering" class="headerlink" title="Feature Engineering"></a>Feature Engineering</h3><h4 id="Non-Linear-Features"><a href="#Non-Linear-Features" class="headerlink" title="Non-Linear Features"></a>Non-Linear Features</h4><p><strong>Idea:</strong> let input be some function of $\mathbf{x} = [x_1, …, x_M]$<br><strong>Examples:</strong> polynomial, sigmoid, log, …<br><strong>Takeaway:</strong> Non-linear features allow linear models to capture nonlinear aspects of the original input without changes to the model</p>
+<h3 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h3><p><strong>Motivation:</strong> Occam’s Razor $\Rightarrow$ small number of (<em>important</em>) features</p>
+<p><strong>Given:</strong> Objective Function $J(\theta)$<br><strong>Goal:</strong> Find $\hat{\theta} = \underset{\theta}\mathrm{argmin} \ J(\theta) + \lambda r(\theta)$<br><strong>Def:</strong> Regularizer $r(\theta)$, tradeoff between fitting the data and keeping the model simple.</p>
+<table>
+<thead>
+<tr>
+<th>$q$</th>
+<th>$r(\theta)$</th>
+<th>yields</th>
+<th>name</th>
+<th>optimization notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>$|\theta|<em>0 = \sum 1</em>{(\theta_m\neq 0)}$</td>
+<td>zeros</td>
+<td>L0 reg.</td>
+<td>bad, rarely used</td>
+</tr>
+<tr>
+<td>1</td>
+<td>$|\theta|_1 = \sum |\theta_m|$</td>
+<td>zeros</td>
+<td>L1 reg.</td>
+<td>subdifferentiable, for sparse output, feature selection</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$|\theta|<em>2$</em>$= \sum \theta_m^2$</td>
+<td>small values</td>
+<td>L2 reg.</td>
+<td>differentiable, computational efficient, no sparse output</td>
+</tr>
+</tbody></table>
+<p><strong>Remarks:</strong></p>
+<ul>
+<li><p><strong>Don’t Regularize the Bias (Intercept) Parameter!</strong> (where $x_0 = 1$)</p>
+</li>
+<li><p><strong>Whitening Data:</strong> by subtracting its mean and dividing by its variance,  it helps all the features be penalized in the same units</p>
+</li>
+<li><p>If multinomial logistic regression is trained infinitely without regularization, the model pushes the probability to be more likely by pushing weights for correct labels towards infinite, and weights for incorrect labels towards negative infinite.</p>
+</li>
+</ul>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

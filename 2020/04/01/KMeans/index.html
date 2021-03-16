@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://images.yourstory.com/cs/2/5739db30-22e7-11e9-9aaa-0334d2a19842/41555495324891.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >K-Means</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="K-Means"><a href="#K-Means" class="headerlink" title="K-Means"></a>K-Means</h2><h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ul>
+<li><input disabled="" type="checkbox"> Distinguish between coordinate descent and block coordinate descent</li>
+<li><input disabled="" type="checkbox"> Define an objective function that gives rise to a “good” clustering</li>
+<li><input disabled="" type="checkbox"> Apply block coordinate descent to an objective function preferring each point to be close to its nearest objective function to obtain the KǦMeans algorithm</li>
+<li><input disabled="" type="checkbox"> Implement the KǦMeans algorithm</li>
+<li><input disabled="" type="checkbox"> Connect the nonconvexity of the KǦMeans objective function with the (possibly) poor performance of random initialization</li>
+</ul>
+<p><strong>Inductive Bias</strong></p>
+<h4 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h4><p><strong>Given</strong> unlabeled feature vectors $\mathcal{D} = {\mathbf{x}^i}_{i=1}^N$<br><strong>Initialize</strong> cluster centers $c = {\mathbf{c}_1, \mathbf{c}_2,…,\mathbf{c}_K}$<br>and cluster assignments $\mathbf{z} = {z^1,z^2,…,z^N}$ for $\mathcal{D}$, i.e. $\mathbf{x}^i$ is in class i<br><strong>Repeat reassignment until convergence</strong></p>
+<ul>
+<li>for $j$ in ${1,…,k}$, $\mathbf{c}_j=$ mean of all points assigned to cluster $j$</li>
+<li>for $i$ in ${1,…,N}$, $z^i = $ <strong>index</strong> of cluster center nearest to $\mathbf{x}^i$</li>
+</ul>
+<h4 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h4><p><strong>Decision Rule:</strong> Assign each point $\mathbf{x}^i$ to its nearest cluster center $\mathbf{c}^j$</p>
+<p><strong>Objective function:</strong> This is <strong>Non-Convex</strong><br>$$c = \underset{c}{\argmin}\sum_{i=1}^N\underset{z^i}{\min}|\mathbf{x}^{i}-\mathbf{c}<em>{z^i}|^2_2 \tag{$\mathbf{x}^i$ has cluster assignment $z^i$}$$ can be rewritten as $$c, \mathbf{z} = \argmin</em>{c,\mathbf{z}}\sum_{i=1}^N|\mathbf{x}^i-\mathbf{c}<em>{z^i}|^2_2 = \argmin</em>{c,\mathbf{z}}J(c,\mathbf{z})$$</p>
+<h4 id="Block-Coordinate-Descent"><a href="#Block-Coordinate-Descent" class="headerlink" title="Block Coordinate Descent"></a>Block Coordinate Descent</h4><p><strong>Repeat reassignment in practice (block coordinate descent):</strong></p>
+<ul>
+<li>$\mathbf{c} = \argmin_cJ(c,\mathbf{z})$, which decomposes in close form $$J(c,\mathbf{z}) = \sum_{i=1}^N|\mathbf{x}^i-\mathbf{c}<em>{z^i}|^2_2 = \sum</em>{j=1}^K\sum_{i:z^i=j}^N|\mathbf{x}^i-\mathbf{c}_j|^2_2$$ $$\mathbf{c}<em>k = \argmin \sum</em>{i:z^i=k}|\mathbf{x}^i-\mathbf{c}<em>k|^2_2$$ $$= \frac{1}{N_k}\sum</em>{i:z^i=k}\mathbf{x}^i \tag{intuitively just the average of all x}$$</li>
+<li>$z_i = \argmin_{\mathbf{z}}J(c,\mathbf{z})= \underset{j}{\argmin}|\mathbf{x}^i-\mathbf{c}_j|^2_2$</li>
+</ul>
+<p><strong>What’s the difference with coordinate descent?</strong><br>Block coordinate descent tries to minimize $J(\alpha, \beta)$ wiht two parameters, while coordinate descent tries to minimize $J(\theta)$ with one parameter.<br>In coordinate descent, we pick one dimension and minimize along that dimension. In block coordinate descent, we minimize over an entire group at a time. And update $\alpha$ while fixing $\beta$, update $\beta$ while fixing $\alpha$.</p>
+<p><strong>Initialization (matters a lot)</strong></p>
+<ul>
+<li>Random (Lyold’s Method): may converge to local optimum, can be arbitrarily bad</li>
+</ul>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

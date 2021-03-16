@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://www.edureka.co/blog/wp-content/uploads/2017/12/Perceptron-Learning-Algorithm_03.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Perceptron</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="Perceptron"><a href="#Perceptron" class="headerlink" title="Perceptron"></a>Perceptron</h2><h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> Explain the difference between online learning and<br>batch learning</li>
+<li><input checked="" disabled="" type="checkbox"> Implement the perceptron algorithm for binary<br>classification</li>
+<li><input checked="" disabled="" type="checkbox"> Determine whether the perceptron algorithm will<br>converge based on properties of the dataset, and<br>the limitations of the convergence guarantees</li>
+<li><input checked="" disabled="" type="checkbox"> Describe the inductive bias of perceptron and the<br>limitations of linear models</li>
+<li><input disabled="" type="checkbox"> Draw the decision boundary of a linear model</li>
+<li><input checked="" disabled="" type="checkbox"> Identify whether a dataset is linearly separable or not</li>
+<li><input disabled="" type="checkbox"> Defend the use of a bias term in perceptron</li>
+</ul>
+<hr>
+<p><strong>Key Idea:</strong> Try to learn the hyperplane</p>
+<p><strong>Decision Function:</strong><br>$$h(\mathbf{x}) = sign(\theta^{T}\mathbf{x})$$<br>for $y\in{-1,+1}$, activation: $a = \theta^T\mathbf{x}$</p>
+<h4 id="Vector-projection"><a href="#Vector-projection" class="headerlink" title="Vector projection"></a>Vector projection</h4><p>Projection of $\mathbf{a}$ onto $\mathbf{b}: \mathbf{c} = \mathbf{a}\cdot\mathbf{b} = |a|cos(\theta) = \frac{|a||b|}{|b|}cos(\theta) = \frac{\mathbf{a}\cdot\mathbf{b}}{|b|} = \frac{\mathbf{a}\cdot\mathbf{b}}{|b|^2}\mathbf{b}$</p>
+<p>Projection of $\mathbf{x}^{(i)}$ onto $\mathbf{w}$(suppose $\mathbf{|w|} = 1$ for sign $a$ does not change): $(\mathbf{x}^{(i)}\cdot\mathbf{w})\mathbf{w}$</p>
+<h4 id="Geometric-Interpretation-Decision-Boundary"><a href="#Geometric-Interpretation-Decision-Boundary" class="headerlink" title="Geometric Interpretation: Decision Boundary"></a>Geometric Interpretation: Decision Boundary</h4><p>Decision boundary is precisely where activation is zero:</p>
+<p>$$B = {x: \sum_d w_dx_d = 0}$$ suppose bias is zero.<br>$\sum_d w_dx_d = \mathbf{w}^T\mathbf{x}$, and the dot product is zero if and only if two vectors are <strong>perpendicular</strong>. Thus decision boundary is just the plane perpendicular (orthogonal) to $\mathbf{w}$:</p>
+<p>$$B = {\mathbf{x’}: \mathbf{w}^T\mathbf{x} + b = 0}$$</p>
+<p>Hyperplane $$H = {\mathbf{x’}: \mathbf{\theta}^T\mathbf{x’} = 0}$$ $\mathbf{x’} = [1, x_1, …, x_M], \mathbf{\theta} = [b, w_1, …, w_M]^T$ thus splitting hyperplane into two subplane:<br>$$H^+ = {\mathbf{x}: \mathbf{\theta}^T\mathbf{x} &gt; 0, x_0 = 1}\tag{Positive in direction of weights}$$ $$H^- = {\mathbf{x}: \mathbf{\theta}^T\mathbf{x} &lt; 0, x_0 = 1}\tag{Negarive in opposite direction}$$</p>
+<h4 id="Interpreting-Bias-term"><a href="#Interpreting-Bias-term" class="headerlink" title="Interpreting Bias term"></a>Interpreting Bias term</h4><p>The role of bias is to shift the decision boundary away from origin in the direction of $\mathbf{w}$ in $-b$ units. (because $\mathbf{w}^T\mathbf{x}=-b$) (in our algorithm, 1 unit): so that activation is increased by fixed $b$<br>In the direction of $\mathbf{w}$ means</p>
+<ul>
+<li>if $b$ positive, boundary is shifted <strong>away</strong> from $\mathbf{w}$; more examples should be classified as positive.</li>
+<li>if $b$ negative, boundary is shifted <strong>toward</strong> $\mathbf{w}$; more examples should be classified as negative.<ul>
+<li>e.g., $\mathbf{w}^T\mathbf{x}^{i} = 0$ negatively misclassifies $y^i \Rightarrow$ positive bias (that shifts -b units in direction of $\mathbf{w}$), so that more examples are classified negatively.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Interpreting-Perceptron-Weights"><a href="#Interpreting-Perceptron-Weights" class="headerlink" title="Interpreting Perceptron Weights"></a>Interpreting Perceptron Weights</h4><p>How sensitive is perceptron classifier to <em>small changes</em> in some features?</p>
+<h4 id="Inductive-Bias"><a href="#Inductive-Bias" class="headerlink" title="Inductive Bias"></a>Inductive Bias</h4><ol>
+<li>Decision boundary should be linear</li>
+<li>Most recent mistakes are the most important.</li>
+</ol>
+<h4 id="Online-Learning"><a href="#Online-Learning" class="headerlink" title="Online Learning"></a>Online Learning</h4><ul>
+<li><p>Gradually learn as each example is received</p>
+</li>
+<li><p>Examples: stock market prediction, email classification</p>
+</li>
+<li><p>Algorithm: For i = …,</p>
+<ul>
+<li><p>Receive unlabeled instance $\mathbf{x}^{(i)}$</p>
+</li>
+<li><p>Predict $\vec{y} = h(\mathbf{x}^{(i)})$</p>
+<ul>
+<li>$h(\mathbf{x}) = sign(\vec{w}^T\mathbf{x} + b)$</li>
+<li>Initialize $\vec{w} = 0, b = 0$</li>
+</ul>
+</li>
+<li><p>Receive label $y^{(i)}$</p>
+</li>
+<li><p>Update parameters $\theta$<br>if positive mistake ($y^{(i)} = 1$ and $y^{(i)} \neq \vec{y}$):</p>
+<ul>
+<li>$\vec{w} = \vec{w} + \vec{x}^{(i)}$</li>
+<li>$b = b + 1$</li>
+</ul>
+<p>else if negative mistake ($y^{(i)} = -1$ and $y^{(i)}\neq \vec{y}$):</p>
+<ul>
+<li>$\vec{w} = \vec{w} - \vec{x}^{(i)}$</li>
+<li>$b = b - 1$</li>
+</ul>
+<p>Or mathematically, $\theta \leftarrow \theta + y^{(i)}\mathbf{x}^{(i)}$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Batch-Learning"><a href="#Batch-Learning" class="headerlink" title="Batch Learning"></a>Batch Learning</h4><ul>
+<li>Learn from all the example at once</li>
+<li>Learn until convergence, iterating through each example over and over</li>
+<li><strong>When to converge</strong></li>
+</ul>
+<h5 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h5><p>The Batch Perceptron Algorithm can be derived in two ways</p>
+<ol>
+<li>By extending online Perceptron Algorithm to batch setting</li>
+<li>By applying Stochastic Gradient Descent to minimize <strong>Hinge Loss</strong> on linear seperator</li>
+</ol>
+<hr>
+<h4 id="Geometric-Margin"><a href="#Geometric-Margin" class="headerlink" title="Geometric Margin"></a>Geometric Margin</h4><p><strong>Definition</strong>:The margin of example $\mathbf{x}$ with respect to a linear seperable $\mathbf{w}$ is the distance from $\mathbf{x}$ to the plane $\mathbf{w}\cdot\mathbf{x} = 0$, positive or negative</p>
+<p><strong>Definition</strong>: The margin $\gamma_w$ w.r.t $\mathbf{w}$ is the smallest margin over points $\mathbf{x}\in S$</p>
+<p><strong>Definition</strong>: The margin $\gamma$ of a set of examples $S$ is the maximum $\gamma_w$ over all linear seperators  $\mathbf{w}$</p>
+<p><strong>Definition</strong>: (Linear Separability) For a binary classification problem, a set of examples $S$ is linearly separable if there exists a linear decision boundary that separate points</p>
+<h4 id="Analysis-Perceptron"><a href="#Analysis-Perceptron" class="headerlink" title="Analysis: Perceptron"></a>Analysis: Perceptron</h4><p><strong>Perceptron Mistake Bound</strong>:m If data has margin $\gamma$ and all points inside a ball of radius $R$, then Perceptron makes $\leq (R/\gamma)^2$ mistakes.</p>
+<blockquote>
+<p>If the data is linearly separable with margin $\gamma$, then there exists some weight vector $\mathbf{w}’$<br>that achieves this margin. What we prove is that the angle between $\mathbf{w}$ and $\mathbf{w}’$ actually decreases</p>
+</blockquote>
+<blockquote>
+<p>Converge in finite steps for linearly separable data</p>
+</blockquote>
+<p><strong>Perceptron Convergence Theorem (not linearly separable data)</strong>: $(x_i, y_i)<em>{i=1}^m$ with</em> $|x_i| \leq R$, $\mathbf{u}$ be any unit vector, $\gamma &gt; 0$, define deviation of example as</p>
+<p>$$d_i = max{0, \gamma-y_i(\mathbf{u}\cdot\mathbf{x}_i)}$$</p>
+<p>and $D = \sqrt{\sum_{i=1}^m d_i^2}$. The number of mistakes of online perceptron algorithm on this sequence is bounded by $(\frac{R+D}{\gamma})^2$.</p>
+<blockquote>
+<p>Perceptron will not converge in this case. But achieve similar bound in one pass</p>
+</blockquote>
+<h4 id="Limitations-XOR-Problems"><a href="#Limitations-XOR-Problems" class="headerlink" title="Limitations (XOR Problems)"></a>Limitations (XOR Problems)</h4><p>Solutions</p>
+<ul>
+<li>Neural Networks</li>
+<li>Kernel Approach</li>
+</ul>
+<hr>
+<h3 id="Psudo-code"><a href="#Psudo-code" class="headerlink" title="Psudo code"></a>Psudo code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">PerceptronTrain (D, MaxIter):</span><br><span class="line">  <span class="comment"># Initialization</span></span><br><span class="line">  w_d = <span class="number">0</span>, <span class="keyword">for</span> <span class="built_in">all</span> d = <span class="number">1</span> ... D</span><br><span class="line">  b = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> <span class="built_in">iter</span> = <span class="number">1</span> ... MaxIter do</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">all</span> (x, y) <span class="keyword">in</span> D do</span><br><span class="line">      a = <span class="built_in">sum</span>(w_d * x_d) + b  </span><br><span class="line">      <span class="keyword">if</span> ya &lt;= <span class="number">0</span> then           <span class="comment"># ya is positive if the current prediction is correct</span></span><br><span class="line">        w_d = w_d + yx_d        <span class="comment"># update weights</span></span><br><span class="line">        b = b + y               <span class="comment"># update bias</span></span><br><span class="line">      end <span class="keyword">if</span></span><br><span class="line">    end <span class="keyword">for</span></span><br><span class="line">  end <span class="keyword">for</span></span><br><span class="line">  <span class="keyword">return</span> w_0, w_1, ... , w_D, b</span><br><span class="line"></span><br><span class="line">PerceptronTest (w_0, w_1, ... , w_D, b, x):</span><br><span class="line">  a = <span class="built_in">sum</span>(w_d * x_d) + b</span><br><span class="line">  <span class="keyword">return</span> sign(a)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sklearn"><a href="#Sklearn" class="headerlink" title="Sklearn"></a>Sklearn</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_digits</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> Perceptron</span><br><span class="line">X, y = load_digits(return_X_y=<span class="literal">True</span>)</span><br><span class="line">clf = Perceptron(tol=<span class="number">1e-3</span>, random_state=<span class="number">0</span>) <span class="comment"># stopping criterion</span></span><br><span class="line">clf.fit(X, y)</span><br><span class="line">clf.score(X, y)</span><br></pre></td></tr></table></figure>
+
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://thumbs.gfycat.com/DecimalFluidCusimanse-size_restricted.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Backpropagation</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="Backpropagation"><a href="#Backpropagation" class="headerlink" title="Backpropagation"></a>Backpropagation</h2><h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> Construct a computation graph for a function as specified by an algorithm</li>
+<li><input checked="" disabled="" type="checkbox"> Carry out the backpropagation on an arbitrary computation graph</li>
+<li><input checked="" disabled="" type="checkbox"> Construct a computation graph for a neural network, identifying all the given and intermediate quantities that are relevant</li>
+<li><input checked="" disabled="" type="checkbox"> Instantiate the backpropagation algorithm for a neural network</li>
+<li><input checked="" disabled="" type="checkbox"> Instantiate an optimization method (e.g. SGD) and a regularizer (e.g. L2) when the parameters of a model are comprised of several matrices corresponding to different layers of a neural network</li>
+<li><input checked="" disabled="" type="checkbox"> Apply the empirical risk minimization framework to learn a neural network</li>
+<li><input checked="" disabled="" type="checkbox"> Use the finite difference method to evaluate the gradient of a function</li>
+<li><input checked="" disabled="" type="checkbox"> Identify when the gradient of a function can be computed at all and when it can be computed efficiently</li>
+</ul>
+<p><strong>Chain Rule:</strong> Given $\mathbf{y} = g(\mathbf{u}), \mathbf{u} = h(\mathbf{x})$, $$\frac{dy_i}{dx_k} = \sum_{j=1}^J\frac{dy_i}{du_j}\frac{du_j}{dx_k}, \ \forall i,k$$</p>
+<h4 id="Previously-we-are-doing-forward-propagation-…"><a href="#Previously-we-are-doing-forward-propagation-…" class="headerlink" title="Previously we are doing forward propagation …"></a>Previously we are doing forward propagation …</h4><blockquote>
+<h4 id="Multi-Class-Output"><a href="#Multi-Class-Output" class="headerlink" title="Multi-Class Output"></a>Multi-Class Output</h4><ul>
+<li><strong>Input:</strong> Given $x_i, \forall i$</li>
+<li><strong>Hidden (linear):</strong> $a_j = \sum_{i=0}^M\alpha_{j,i}x_i,  \forall j$ (bias term is folded in)</li>
+<li><strong>Hidden (nonlinear):</strong> $z_j = \sigma(a_j), \ \forall j$</li>
+<li><strong>Output (linear):</strong> $b_k = \sum_{k=0}^D\beta_{k,j}z_j, \ \forall k$</li>
+<li><strong>Output (nonlinear):</strong> $y_k = \mathrm{softmax}(b_k) =  \frac{\mathrm{exp}(b_k)}{\sum_{\ell=1}^K\mathrm{exp}(b_\ell)}$</li>
+<li><strong>Loss (cross entropy):</strong> $$J = -(y\mathrm{log}(p) + (1-y)\mathrm{log}(1-p)) \tag{Binary}$$</li>
+</ul>
+<p>$$J = -\sum_{k=1}^Ky_{k}\mathrm{log}(\hat{y}_k) \tag{Multiclass}$$</p>
+</blockquote>
+<p>Automatic Differentiation – Reverse Mode (aka. Backpropagation)</p>
+<ol>
+<li>Initialize all partial derivatives $dy/du_j$ to 0 and $dy/dy = 1$.</li>
+<li>Visit each node in reverse topological order. For variable $u_i = g_i<br>(v_1,…, v_N)$</li>
+</ol>
+<ul>
+<li>We already know $dy/du_i$</li>
+<li>Increment $dy/dv_j$ by $\frac{dy}{du_i}\frac{du_i}{dv_j}$</li>
+</ul>
+<p>Return partial derivatives $dy/du_i$ for all variables</p>
+<h4 id="Finite-Difference-Method-Symbolic-Differentiation"><a href="#Finite-Difference-Method-Symbolic-Differentiation" class="headerlink" title="Finite Difference Method (Symbolic Differentiation)"></a>Finite Difference Method (Symbolic Differentiation)</h4><p>The centered finite difference approximation:</p>
+<p>$$\frac{\partial}{\partial\theta_i}J(\theta) \approx \frac{J(\theta + \epsilon \mathbf{d}_i) - J(\theta - \epsilon \mathbf{d}_i)}{2\epsilon}$$</p>
+<p>where $\mathbf{d}_i$ is a one-hot vector where the $i^{th}$ entry is one and zeros otherwise.</p>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

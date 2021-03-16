@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://raw.githubusercontent.com/Nikeshbajaj/MachineLearningFromScratch/master/LogisticRegression/img/example5.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Logistic Regression</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h4 id="Probabilistic-Learning"><a href="#Probabilistic-Learning" class="headerlink" title="Probabilistic Learning"></a>Probabilistic Learning</h4><p>Assume our output is sampled from a conditional probability distribution:</p>
+<ul>
+<li>$\mathbf{x}^{(i)}\sim p(\cdot)$</li>
+<li>$y^{(i)}\sim p(\cdot|\mathbf{x}^{(i)})$</li>
+</ul>
+<p><strong>Goal:</strong> Learn a probability distribution $p(y|\mathbf{x})$ that best approximates the real $p$.</p>
+<h4 id="Maximum-Likelihood-Estimation"><a href="#Maximum-Likelihood-Estimation" class="headerlink" title="Maximum Likelihood Estimation"></a>Maximum Likelihood Estimation</h4><p>$$\theta^{MLE} = \underset{\theta\in \Theta}\mathrm{argmax}\prod_{i=1}^Np(\mathbf{x}^{(i)}|\theta)$$</p>
+<ul>
+<li>MLE tries to allocate as much probability mass as possible to observed data, at the expense of things we have not seen.</li>
+</ul>
+<h4 id="Binary-Logistic-Regression"><a href="#Binary-Logistic-Regression" class="headerlink" title="Binary Logistic Regression"></a>Binary Logistic Regression</h4><p><strong>Define a linear classifier</strong><br>$$\mathcal{D} = {\mathbf{x}^{(i)}, y^{(i)}}_{i=1}^N, \text{where } \mathbf{x}\in\mathbb{R}^M \text{and } y\in{0, 1}$$<br><strong>Define an objective function</strong><br>Use a differentiable function: $logistic(u) = \frac{1}{1+e^{-u}}$</p>
+<ul>
+<li>$$p_{\theta}(y=1|\mathbf{x}^{(i)}) = \frac{1}{1+\mathrm{exp}(-\theta^T\mathbf{x}^{(i)})} = \sigma(\theta^T\mathbf{x}^{(i)})$$</li>
+<li>$$p_{\theta}(y=0|\mathbf{x}^{(i)}) = 1 - \sigma(\theta^T\mathbf{x}^{(i)})$$</li>
+</ul>
+<p>Succinctly we can write: $$J(\theta) = -\sum_{i=1}^N\mathrm{log}\bigg(\sigma(\theta^T\mathbf{x}^{(i)})^{y^{(i)}}(1-\sigma(\theta^T\mathbf{x}^{(i)})^{1-y^{(i)}})\bigg)$$</p>
+<p><strong>Optimize it with GD/SGD to learn parameters</strong><br>$$\theta^* = \underset{\theta\in\Theta}\mathrm{argmin} \ J(\theta)$$<br>where we minimize the negative log conditional likelihood (equivalent to maximizing Conditional Likelihood Estimation):<br>$$J(\theta) = -\mathrm{log}\prod_{i=1}^Np_{\theta}(y^{(i)}|\mathbf{x}^{(i)}) = \sum_{i=1}^NJ^{(i)}(\theta)$$</p>
+<p>Why <strong>NLL</strong>?</p>
+<ul>
+<li>Some likelihood can’t be maximized (MLE parameters for logistic regression)</li>
+<li>Don’t have joint model $p(x,y)$</li>
+<li>Works well on linear regression</li>
+</ul>
+<h4 id="Logistic-Regression-MCLE"><a href="#Logistic-Regression-MCLE" class="headerlink" title="Logistic Regression MCLE"></a>Logistic Regression MCLE</h4><p>Partial derivative of example $i$ <strong>w.r.t</strong> $k^{th}$ feature:<br>$$J^{(i)}(\theta) =-p_{\theta}(y^{(i)}|\mathbf{x}^{(i)})  = -\bigg(y^{(i)}\mathrm{log}(\sigma(\theta^T\mathbf{x}^{(i)}))+(1-y^{(i)})\mathrm{log}(1-\sigma(\theta^T\mathbf{x}^{(i)}))\bigg)$$</p>
+<p>$$\frac{\partial}{\partial \theta_k}J^{(i)}(\theta) = -\frac{y^{(i)}}{\sigma(\theta^T\mathbf{x}^{(i)})}(\sigma(\theta^T\mathbf{x}^{(i)})(1-\sigma(\theta^T\mathbf{x}^{(i)}))x^{(i)}_k)$$</p>
+<p>$$+\frac{(1-y^{(i)})}{\sigma(1-\theta^T\mathbf{x}^{(i)})}(\sigma(\theta^T\mathbf{x}^{(i)})(1-\sigma(\theta^T\mathbf{x}^{(i)})x^{(i)}_k)$$</p>
+<p>$$=(-y^{(i)}(1-\sigma(\theta^T\mathbf{x}^{(i)})+(1-y^{(i)})\sigma(\theta^T\mathbf{x}^{(i)}))x^{(i)}_k$$</p>
+<p>$$=(\sigma(\theta^T\mathbf{x}^{(i)})-y^{(i)})x^{(i)}_k$$</p>
+<p>SGD:</p>
+<ol>
+<li>randomly pick an example: $i\sim \text{shuffle}(1,…,N)$</li>
+<li>compute the gradient of the log-likelihood for that example: $g \leftarrow J^{(i)}(\theta) = -\mathrm{log}p_{\theta}(y^{(i)}|\mathbf{x}^{(i)})$</li>
+<li>update all the parameters using that gradient: $\theta_k\leftarrow \theta_k - \lambda g$</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Debugging common mistake while updating parameters in SGD</span></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">not</span> converged:</span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> shuffle([<span class="number">1</span>,...,N]):</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> [<span class="number">1</span>,...,K]:</span><br><span class="line">      g[k] = grad(x[i],y[i],theta,k)</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> [<span class="number">1</span>,...,k]:</span><br><span class="line">      theta[k] = theta[k] - gamma * g[k]</span><br></pre></td></tr></table></figure>
+
+<p><strong>Predict the class with highest probability under the model</strong><br>$$\hat{y} = \underset{y\in{0,1}}\mathrm{argmax}\ p_{\theta}(y|\mathbf{x}) = \mathbb{1}_{(p \geq 0.5)}$$</p>
+<h4 id="Multinomial-Logistic-Regression"><a href="#Multinomial-Logistic-Regression" class="headerlink" title="Multinomial Logistic Regression"></a>Multinomial Logistic Regression</h4><p>for $k$ in $1,…,K$,<br>$$\frac{\partial J_i(\Theta)}{\partial \theta_k} = -(T_{i,j}-p(k|\mathbf{x}^{(i)},\Theta))\mathbf{x}^{(i)}$$<br>for $k$ in $1,…,K$,<br>$$\theta_k \leftarrow \theta_k - \gamma \frac{\partial J_i(\Theta)}{\partial \theta_k}$$</p>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

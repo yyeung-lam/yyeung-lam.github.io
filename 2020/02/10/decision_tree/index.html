@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://miro.medium.com/max/3106/1*hmWktuMpZo5hX1AavOc92w.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Decision Tree</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="Decision-Tree"><a href="#Decision-Tree" class="headerlink" title="Decision Tree"></a>Decision Tree</h2><h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> Implement decision tree training and prediction</li>
+<li><input checked="" disabled="" type="checkbox"> Use effective splitting criteria for decision tree and be able to define entropy, conditional entropy, and mutual information/gini gain</li>
+<li><input checked="" disabled="" type="checkbox"> Explain the difference between generalization and memorization [CIML]</li>
+<li><input checked="" disabled="" type="checkbox"> Describe the inductive bias of a decision tree</li>
+<li><input checked="" disabled="" type="checkbox"> Formalize a learning problem by identifying the input space, output space, hypothesis space, and target function</li>
+<li><input checked="" disabled="" type="checkbox"> Explain the difference between training error and training error</li>
+<li><input checked="" disabled="" type="checkbox"> Judge whether a decision tree is “overfitting” or “underfitting”</li>
+<li><input disabled="" type="checkbox"> Implementing a pruning or early stopping method to combat overfitting in Decision Tree Learning</li>
+</ul>
+<hr>
+<h4 id="Shallow-Decision-Tree"><a href="#Shallow-Decision-Tree" class="headerlink" title="(Shallow) Decision Tree"></a>(Shallow) Decision Tree</h4><ul>
+<li>Inductive Bias: Decisions can be made by only looking at small number of features</li>
+<li>Inductive Bias source of error: learning algorithm cannot cope with data</li>
+</ul>
+<h4 id="Splitting-criteria"><a href="#Splitting-criteria" class="headerlink" title="Splitting criteria"></a>Splitting criteria</h4><ul>
+<li><p>Gini Impurity: Expected Misclassification Rate</p>
+<ul>
+<li>Gini Impurity of dataset D: $G(Y;D) = \sum_{k=1}^KP(Y=k)\cdot P(Y\neq k) = 1-\sum_{k=1}^KP(Y=k)^2$ if binary</li>
+<li>Gini Gain that splits on X: $$G(Y,X;D) = G(Y;D) - \sum_{x=1}^nP(X=x)G(Y;D_{X=x})$$</li>
+<li>Gini Gain: How much pure the dataset becomes after split</li>
+</ul>
+</li>
+<li><p>Mutual Information</p>
+<ul>
+<li>Entropy: the expected # of bits to code a random draw from ., DT tries to reduce entropy of the random variable<br>$$H(Y) = -\sum_{i=1}^nP(Y=i)\mathrm{log}_2P(Y=i)$$</li>
+<li>Specific Conditional Entropy:<br>$$H(Y|X=x) = -\sum_{i=1}^nP(Y=i|X=x)\mathrm{log}_2P(Y=i|X=x)$$</li>
+<li>Conditional Entropy: expected value of specific conditional entropy<br>$$H(Y|X) = \sum_{x\in range(X)}P(X=x)H(Y|X=x)$$</li>
+<li>Mutual Information: <em>If we know X, how much does it reduce the uncertainty about Y?</em><br>$$I(X,Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)$$</li>
+</ul>
+</li>
+</ul>
+<p><strong>Underfitting</strong></p>
+<ul>
+<li>Too simple, unable to capture trends in data, exhibits too much bias</li>
+<li>Examples: majority-vote classifier</li>
+</ul>
+<p><strong>Overfitting</strong></p>
+<ul>
+<li>Too complex, fitting noise in data or fluctuations inherent in sample, does not have enough bias</li>
+<li>Examples: Memorizer</li>
+</ul>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

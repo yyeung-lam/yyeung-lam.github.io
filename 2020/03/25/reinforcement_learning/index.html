@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://user-images.githubusercontent.com/36581610/50039309-52291400-fffe-11e8-8b57-2344ba92ddc3.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Reinforcement Learning</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="Reinforcement-Learning"><a href="#Reinforcement-Learning" class="headerlink" title="Reinforcement Learning"></a>Reinforcement Learning</h2><h4 id="Markov-Decision-Processes"><a href="#Markov-Decision-Processes" class="headerlink" title="Markov Decision Processes"></a>Markov Decision Processes</h4><p>For Reinforcement Learning, we assume our data comes from a <strong>Markov decision process</strong> (MDP)</p>
+<p><strong>Components:</strong></p>
+<ul>
+<li>$\mathcal{S}$: set of states</li>
+<li>$\mathcal{A}$: set of actions</li>
+<li>$R(s,a)$: reward function $R:\mathcal{S}\times\mathcal{A}\rightarrow \mathbb{R}$</li>
+<li>$p(s’|s,a)$: state transition probabilities<ul>
+<li>deterministic/nondeterministic</li>
+<li>markov assumption: $p(s_{t+1}|s_t,a_t,…,s_1,a_1) = p(s_{t+1}|s_t,a_t)$</li>
+</ul>
+</li>
+</ul>
+<p><strong>Model for Data:</strong></p>
+<ol>
+<li>Start at state $s_0$</li>
+<li>At each time $t$, the agent<ul>
+<li>observe $s_t\in \mathcal{S}$</li>
+<li>choose an action $a_t = \pi(s_t) \in \mathcal{A}$, applied to policy $\pi$</li>
+<li>receive reward $r_t = R(s_t, a_t) \in \mathbb{R}$</li>
+<li>and finally change to $s_{t+1}\in \mathcal{S}$, which is sampled from $s_{t+1} \sim p(.|s_t, a_t)$</li>
+</ul>
+</li>
+<li>Total payoff is discounted sum of all rewards $\sum_{t=0}^{\infty}\gamma^t r_t$</li>
+</ol>
+<p><strong>Def:</strong> Policy $\pi: \mathcal{S}\rightarrow \mathcal{A}$<br><strong>Goal:</strong> Learn a policy $pi$ for choosing “good” actions that maximize <em>expected</em> total payoff</p>
+<h4 id="Optimal-Policy-Valuation-Function"><a href="#Optimal-Policy-Valuation-Function" class="headerlink" title="Optimal Policy/Valuation Function"></a>Optimal Policy/Valuation Function</h4><ul>
+<li><p>Given $s_0, \pi, p(s_{t+1}|s_t)$, there exists a distribution over <em><strong>state trajectory:</strong></em> $$s_0\overset{a_0 = \pi(s_0)}\longrightarrow s_1 \overset{a_0 = \pi(s_1)}\longrightarrow … \infty$$</p>
+</li>
+<li><p>Value function (Bellman Equation) $$V^\pi(s) = \mathbb{E}<em>{\pi,p(s’|s,a)}\bigg[R(s_0,a_0)+ \gamma R(s_1,a_1) + \gamma^2 R(s_2,a_2)+…|s_0 = s\bigg]$$ $$= R(s_0,a_0) + \gamma\mathbb{E}</em>{\pi,p(s’|s,a)}\bigg[R(s_1,a_1)+\gamma R(s_2,a_2) +…|s_0 = s\bigg]$$ $$= R(s_0,a_0) + \gamma\sum_{s_1\in \mathcal{S}}p(s_1|s,a)\bigg[R(s_1,a_1)+\gamma\mathbb{E}<em>{\pi,p(s’|s,a)}[R(s_2,a_2)+\gamma R(s_3,a_3)+…|s_1]\bigg]$$ $$ = R(s_0,a_0) + \gamma\sum</em>{s_1\in\mathcal{S}}p(s_1|s,a)V^\pi(s_1)$$ for fixed $\pi$, system of $|S|$ equations, and $|S|$ variables</p>
+<blockquote>
+<p><em>Proof</em> Breaking joint probability<br>$$\mathbb{E}<em>{x,y\sim p(x,y)}(f(x)+g(y)) = \sum</em>{x}\sum_yp(x)p(y|x)[f(x)+g(y)]$$ $$= \sum_xp(x)\sum_yf(x)p(y|x) + g(y)p(y|x)$$ $$= \sum_xp(x)[f(x)+\mathbb{E}_{y|x}g(y)]$$</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Optimal Policy:</strong> $\pi^* = \underset{\pi}{\argmax}V^\pi(s)$ for all $s$<br><strong>Optimal Value Function:</strong> $V^{\pi^* }$, the value function when you fix the optimal policy $\pi^* $<br><em><em>Compute $\pi^</em>,V^</em>$** given $V^* , R(s,a), p(s’|s,a)$: $$\pi^* (s) = \underset{a\in\mathcal{A}}{\argmax} \ R(s,a) + \gamma\sum_{s’\in\mathcal{S}}p(s’|s,a)V^* (s’)$$ $$V^* (s) = \underset{a\in\mathcal{A}}{\max} \ R(s,a) + \gamma\sum_{s’\in\mathcal{S}}p(s’|s,a)V^* (s’)$$</p>
+<h4 id="Fixed-Point-Value-Iteration-with-Q-s-a-table"><a href="#Fixed-Point-Value-Iteration-with-Q-s-a-table" class="headerlink" title="Fixed Point Value Iteration with Q(s,a) table"></a>Fixed Point Value Iteration with Q(s,a) table</h4><p><em>Asynchronous updates:</em> update $V(s)$ for each state one at a time</p>
+<ol>
+<li>Initialize value function $V(s) = 0$ or randomly</li>
+<li>While not converged, do<ul>
+<li>for $s\in\mathcal{S}$ do<ul>
+<li>for $a\in\mathcal{A}$ do<ul>
+<li>$Q(s,a) =  R(s,a) + \gamma\sum_{s’\in\mathcal{S}}p(s’|s,a)V (s’)$</li>
+</ul>
+</li>
+<li>$V(s) = \max_a Q(s,a)$</li>
+<li>$t = t+1$ <em>(Asynchronous)</em></li>
+</ul>
+</li>
+<li>$t = t+1$ <em>(Synchronous)</em></li>
+</ul>
+</li>
+<li>Let $\pi(s) = \argmax_a Q(s,a)$, $\forall s$</li>
+<li>Return optimal policy $\pi$</li>
+</ol>
+<p><em>Synchronous updates:</em> update $V(s)$ with fresh values</p>
+<blockquote>
+<p>Remark:</p>
+<ul>
+<li>$V$ converges to $V^* $ if each state is visited infinitely often</li>
+<li>Stopping criterion: stop early if we can</li>
+<li>Greedy policy will be optimal in finite number of steps, even before optimal value function</li>
+</ul>
+</blockquote>
+<h4 id="Policy-Iteration"><a href="#Policy-Iteration" class="headerlink" title="Policy Iteration"></a>Policy Iteration</h4><ol>
+<li>Initialize $\pi$ randomly</li>
+<li>While not converged do<ul>
+<li>Solve Bellman equation for fixed policy $\pi$, $$V^\pi(s) = R(s_0,a_0) + \gamma\sum_{s’\in\mathcal{S}}p(s_1|s,a)V^\pi(s’)$$</li>
+<li>Improve $\pi$ using new value function, $$\pi(s) = \argmax_a \ R(s,a) + \gamma\sum_{s’\in\mathcal{S}}p(s’|s,a)V^\pi (s’)$$</li>
+</ul>
+</li>
+</ol>
+<p><strong>Policy Iteration Convergence</strong></p>
+<ul>
+<li>Number of policy for a fixed size state $|S|$ and action space $|A|$: $|A|^{|S|}$</li>
+<li>Number of iteration is bounded by $|A|^{|S|}$</li>
+</ul>
+<h4 id="Q-Learning"><a href="#Q-Learning" class="headerlink" title="Q Learning"></a>Q Learning</h4><p><strong>Motivation:</strong> Deficiency in valuation iteration and policy iteration. What if we don’t know $R(s,a), p(s’|s,a)$? Typically we don’t know!</p>
+<p>Let $Q^* (s,a)$ be the true expected discounted future reward, for taking action $a$ at state $s$<br>In that case, $$V^* (s) = \max_aQ^* (s,a)$$ $$Q^* (s,a) = R(s,a)+\gamma\sum_{s’}p(s’|s,a)V^* (s’)$$ $$= R(s,a) + \gamma\sum_{s’}p(s’|s,a)[\max_{a’}Q^* (s’,a’)]$$ $$\pi^* = \argmax_a Q^* (s,a)$$ If we can learn $Q^* $ without access to $R(s,a)$ and $p(s’|s,a)$.</p>
+<p><strong>Case: Deterministic Environment</strong><br>$p(s’|s,a) = 1$ if $\delta(s,a) = s’$ and $0$ otherwise.<br>$$\Rightarrow Q^* (s,a) = R(s,a) + \gamma\sum_{s’}p(s’|s,a)[\max_{a’}Q^* (\delta(s,a),a’)]$$</p>
+<p><strong>Algorithm:</strong> $\epsilon - greedy$</p>
+<ol>
+<li>Initialize $Q(s,a) = 0$, $\forall s,a$</li>
+<li>Do forever:<ul>
+<li>(exploit) with probability $1-\epsilon$, select action $a=\max_{a’}Q(s,a’)$</li>
+<li>(explore) with probability $\epsilon$, select a random $a\in\mathcal{A}$</li>
+</ul>
+<ol start="2">
+<li>receive reward $r=R(s,a)$</li>
+<li>observe state $s’ = \delta(s,a)$</li>
+<li>Update, $Q(s,a) \leftarrow r + \gamma\max_{a’}Q(s’,a’)$</li>
+</ol>
+</li>
+</ol>
+<p><strong>Case: Nondeterministic Environment</strong><br>$p(s’|s,a)$ is stochastic<br><strong>Algorithm:</strong></p>
+<ol>
+<li>Initialize $Q(s,a) = 0$, $\forall s,a$</li>
+<li>Do forever:<ul>
+<li>(exploit) with probability $1-\epsilon$, select action $a=\max_{a’}Q(s,a’)$</li>
+<li>(explore) with probability $\epsilon$, select a random $a\in\mathcal{A}$</li>
+</ul>
+<ol start="2">
+<li>receive reward $r=R(s,a)$</li>
+<li>observe state $s’ = \delta(s,a)$</li>
+<li>Update, $Q(s,a) \leftarrow (1-\alpha_n)Q(s,a) + \alpha_n(r + \gamma\max_{a’}Q(s’,a’))$<ul>
+<li>$\alpha_n = \frac{1}{1+visits(s,a,n)}$ because of stochasticity in the environment (number of visits to &lt;$s,a$&gt; up to and including step $n$), or predefined <em>learning rate</em></li>
+<li>Usually written compactly as  $Q(s,a) \leftarrow Q(s,a) + \alpha(r+\gamma\max_{a’}Q(s’,a’)-Q(s,a))$</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>Remarks:</p>
+<ul>
+<li>$Q$ converges to $Q^* $ with probability 1 assuming<ul>
+<li>each &lt;$s,a$&gt; is visited infinitely often</li>
+<li>$0\leq \gamma 1$</li>
+<li>rewards are bounded $|R(s,a)|&lt;\beta$ for some constant $\beta$</li>
+<li>initial $Q$ values are finite</li>
+</ul>
+</li>
+<li>$Q$- Learning is exploration-sensitive: any state visitation works assuming each &lt;$s,a$&gt; is visited infinitely often</li>
+<li>takes “thousands” of hundreds of iterations to converge</li>
+</ul>
+</blockquote>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
