@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/portfolio/" title="Portfolio">
+		                Portfolio
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://www.machinelearningplus.com/wp-content/uploads/2018/11/02_bayes_rule_new.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Naive Bayes</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="Naive-Bayes"><a href="#Naive-Bayes" class="headerlink" title="Naive Bayes"></a>Naive Bayes</h2><ul>
+<li>an example of a Bayesian Network</li>
+<li>admits a closed form solution for MLE and MAP</li>
+<li> learning is extremely efficient: just counting</li>
+</ul>
+<h4 id="Naive-Bayes-Assumption"><a href="#Naive-Bayes-Assumption" class="headerlink" title="Naive Bayes Assumption"></a>Naive Bayes Assumption</h4><p>By the property of conditional independence, if $x_q,x_r$ are conditionally independent given $y$.<br>$$p(\mathbf{x}|y) = \prod p(x_m|y)$$</p>
+<h3 id="Generic-Naive-Bayes-Model"><a href="#Generic-Naive-Bayes-Model" class="headerlink" title="Generic Naive Bayes Model"></a>Generic Naive Bayes Model</h3><p><strong>Support:</strong> Depends on the choice of event model, $P(X_m|Y)$<br><strong>Model:</strong> product of prior and event model $$P(\mathbf{X},Y) = P(Y)\prod_{m=1}^MP(X_m|Y)$$<br><strong>Training:</strong> Find the class-conditional MLE parameters<br><strong>Output:</strong> Probability distribution over possible values of $Y$. Probability that $Y$ will take on its $k^{th}$ possible value, $$P(Y=y_k|\mathbf{x}) = \frac{P(\mathbf{x}|Y=y_k)P(Y=y_k)}{P(\mathbf{x})}$$ $$=\frac{P(Y=y_k)\prod_{m=1}^MP(x_m|Y=y_k)}{\sum_{j}P(\mathbf{x}|Y=y_j)}\tag{Bayes’ rule}$$ $$=\frac{P(Y=y_k)\prod_{m=1}^MP(x_m|Y=y_k)}{\sum_{j}P(Y=y_j)\prod_{m=1}^MP(x_m|Y=y_j)} \tag{Bayes’ assumption}$$<br><strong>Classification:</strong> Find the class that maximizes the <strong>posterior</strong><br>$$\hat{y} = \argmax \ p(Y=y|\mathbf{x})$$ $$=\argmax\frac{p(\mathbf{x}|y)p(Y=y)}{p(\mathbf{x})} \tag{Bayes’ rule}$$ $$=\argmax \ p(\mathbf{x}|Y=y)p(Y=y)$$</p>
+<h4 id="Model-1-Bernoulli-Naive-Bayes"><a href="#Model-1-Bernoulli-Naive-Bayes" class="headerlink" title="Model 1: Bernoulli Naive Bayes"></a>Model 1: Bernoulli Naive Bayes</h4><p><strong>Data:</strong> Binary features vectors $x\in{0,1}^M$, Binary labels $y\in{0,1}$<br><strong>Generative Story:</strong> $y\sim Bernoulli(\phi)$, $x^{(i)}\sim Bernoulli(\theta_{y,i})$<br><strong>Model:</strong> Joint probability distribution: $p_{\phi,\theta}(\mathbf{x},y) = p_{\phi,\theta}(x_1,…,x_M,y) = p_{\phi}(y)\prod_{m=1}^Mp_{\theta}(x_m|y) = p(y|\phi)\prod_{m=1}^Mp(x_m|y,\theta)$ $$(\phi)^y(1-\phi)^{1-y}\bigg[\prod_{m=1}^M(\theta_{y,m})^{x_m}(1-\theta_{y,m})^{1-x_m}\bigg]$$</p>
+<p><strong>Log-likelihood:</strong> $\ell(\phi,\theta) = \mathrm{log}\prod_{i=1}^Np(\mathbf{x}^{(i)},y^{(i)}|\phi,\theta)$ $$= \mathrm{log}\prod_{i=1}^N\bigg(p(y^{(i)}|\phi)\prod_{m=1}^Mp(x_m^{(i)}|y^{(i)},\theta)\bigg)$$ $$=\sum_{i=1}^N\mathrm{log}\bigg(p(y^{(i)}|\phi)+\sum_{m=1}^Mp(x_m^{(i)}|y^{(i)},\theta)\bigg)$$ $$=N_{y=T}\mathrm{log}(\phi)+\sum_{m=1}^MN_{x_m=1,y=T}\mathrm{log}(\theta_{T,m})+\sum_{m=1}^MN_{x_m=0,y=T}\mathrm{log}(1-\theta_{T,m})$$ $$+N_{y=F}\mathrm{log}(1-\phi)+\sum_{m=1}^MN_{x_m=1,y=F}\mathrm{log}(\theta_{F,m})+\sum_{m=1}^MN_{x_m=0,y=F}\mathrm{log}(1-\theta_{F,m})$$</p>
+<h5 id="Maximum-Likelihood-Estimate"><a href="#Maximum-Likelihood-Estimate" class="headerlink" title="Maximum Likelihood Estimate:"></a>Maximum Likelihood Estimate:</h5><p>Count variable: $N_{y=0,x_m=1} = \sum_{i=1}^N\mathbb{I}(y^{(i)}=0 \wedge x_m^{(i)}=1)$<br>Maximum Likelihood Estimator: $$P(Y=1)\equiv\phi^{MLE} = \frac{N_{y=1}}{N}$$</p>
+<p>$$P(x_m|Y=0)\equiv\theta_{y=0,x_m=1}^{MLE} = \frac{N_{y=0,x_m=1}}{N_{y=0}}$$</p>
+<p>$$P(x_m|Y=1)\equiv\theta_{y=1,x_m=1}^{MLE} = \frac{N_{y=1,x_m=1}}{N_{y=1}}$$</p>
+<blockquote>
+<p>A shortcoming of MLE: $x_{k}=0\wedge y=1$ for all observed data, but observed at test data.</p>
+</blockquote>
+<h5 id="MAP-Estimation-Beta-Prior"><a href="#MAP-Estimation-Beta-Prior" class="headerlink" title="MAP Estimation (Beta Prior)"></a>MAP Estimation (Beta Prior)</h5><p><strong>Generative Story:</strong> $\theta_{y,m}\sim Beta(\alpha,\beta)$, $y\sim Bernoulli(\phi)$, $x^{(i)}\sim Bernoulli(\theta_{y,i})$<br><strong>Log-Likelihood:</strong> $\ell^{MAP}(\phi,\theta) = \mathrm{log}[p(\phi,\theta|\alpha,\beta)p(D|\phi,\theta)]$<br>$$=\mathrm{log}\bigg[\bigg(p(\phi|\alpha,\beta)\prod_{m=1}^Mp(\theta_m|\alpha,\beta)\bigg)\bigg(\prod_{i=1}^Np(\mathbf{x}^{(i)},y^{(i)}|\phi,\theta)\bigg)\bigg]$$<br><strong>MAP Estimators:</strong>  $$\phi^{MAP} = \frac{N_1}{N}$$ $$\theta_{y=0,x_m=1}^{MAP} = \frac{\alpha-1+N_{y=0,x_m=1}}{\alpha-1+\beta-1+N_{y=0}}$$ $$\theta_{y=1,x_m=1}^{MAP} = \frac{\alpha-1+N_{y=1,x_m=1}}{\alpha-1+\beta-1+N_{y=1}}$$</p>
+<h4 id="Model-2-Multinomial-Naive-Bayes"><a href="#Model-2-Multinomial-Naive-Bayes" class="headerlink" title="Model 2: Multinomial Naive Bayes"></a>Model 2: Multinomial Naive Bayes</h4><p><strong>Generative Story:</strong> $y\sim Bernoulli(\phi)$, $x^{(i)}<em>j\sim Multinomial(\theta</em>{y^{(i)}},1)$<br><strong>Model:</strong> $p_{\phi,\theta}(\mathbf{x},y) = p_{\phi,\theta}(x_1,…,x_M|y) = p_{\phi}(y)\prod_{m=1}^Mp_{\theta_m}(x_m|y) = $ $$(\phi)^y(1-y)^{1-y}\prod_{m=1}^M\theta_{y,x_m}$$</p>
+<h4 id="Model-3-Gaussian-Naive-Bayes"><a href="#Model-3-Gaussian-Naive-Bayes" class="headerlink" title="Model 3: Gaussian Naive Bayes"></a>Model 3: Gaussian Naive Bayes</h4><p><strong>Support:</strong> $\mathbf{x}\in\mathbb{R}^M$<br><strong>Model:</strong> $p(\mathbf{x},y) = p(y)\prod p(x_m|y)$ where $p(x_m|y)$ is given by a normal distribution<br><strong>Generative Story:</strong> $y\sim Bernoulli(\phi)$, $x_m\sim Normal(\mu_{y,m},\sigma_{y,m}^2) = f(x_m|\mu_{y,m},\sigma_{y,m})$</p>
+<ul>
+<li>Closely related to Logistic Regression</li>
+</ul>
+<h4 id="Model-4-Multiclass-Naive-Bayes"><a href="#Model-4-Multiclass-Naive-Bayes" class="headerlink" title="Model 4: Multiclass Naive Bayes"></a>Model 4: Multiclass Naive Bayes</h4><p><strong>Model:</strong> we permit $y$ to range over $C$ classes, $y\sim Multinomial(\phi,1)$ and we have a separate conditional distribution $p(x_m|y)$ for each of the $C$ classes.</p>
+<h5 id="Maximum-Likelihood-Estimate-1"><a href="#Maximum-Likelihood-Estimate-1" class="headerlink" title="Maximum Likelihood Estimate:"></a>Maximum Likelihood Estimate:</h5><p>Maximum Likelihood Estimator: $$P(Y=y_k)\equiv\phi^{MLE} = \frac{N_{Y=y_k}}{N}$$</p>
+<p>$$P(x_m=k|Y=y_k)\equiv\theta_{Y=y_k,x_m=k}^{MLE} = \frac{N_{Y=y_k,x_m=k}}{N_{Y=y_k}}$$</p>
+<h4 id="Visualization"><a href="#Visualization" class="headerlink" title="Visualization"></a>Visualization</h4><p>Naïve Bayes has a <strong>linear</strong> decision boundary if variance (sigma) is constant across classes</p>
+<h4 id="Generative-vs-Discriminative"><a href="#Generative-vs-Discriminative" class="headerlink" title="Generative vs. Discriminative"></a>Generative vs. Discriminative</h4><ul>
+<li>Generative Classifier<ul>
+<li>Naive Bayes</li>
+<li>Define a joint model of the observations $\mathbf{x}$ and $y$</li>
+<li>Learning maximizes joint likelihood</li>
+<li>Use Bayes’ rule to classifty based on the posterior $p(y|\mathbf{x})$</li>
+</ul>
+</li>
+<li>Discriminative Classifier<ul>
+<li>Logistic regression</li>
+<li>Directly model conditional $p(y|\mathbf{x})$</li>
+<li>Learning maximizes conditional likelihood</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Finite Sample Analysis (Ng &amp; Jordan, 2002):<br>If model assumptions are correct: Naive Bayes is a more efficient learner (requires fewer samples) than Logistic Regression. Otherwise, Logistic Regression does better than Naive Bayes</p>
+</blockquote>
+<h4 id="Prior-distribution-and-Regularization"><a href="#Prior-distribution-and-Regularization" class="headerlink" title="Prior distribution and Regularization"></a>Prior distribution and Regularization</h4><ul>
+<li>Beta prior pushes probabilities away from zero/one extreme</li>
+<li>Gaussian prior encourages parameters to be close to zero  </li>
+</ul>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

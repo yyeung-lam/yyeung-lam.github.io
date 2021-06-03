@@ -147,13 +147,45 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://liquidplanner-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/HiRes-17.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >projects</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://i.imgur.com/xnPvEok.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Some Thoughts about Linear Regression</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p><a target="_blank" rel="noopener" href="https://www.soccer-alpha.com/">SoccerAlpha: Soccer Prediction by Machine Learning</a></p>
-<p><a target="_blank" rel="noopener" href="https://towardsdatascience.com/text-mining-and-classification-on-earnings-call-transcripts-e63d9856d7d8">Text Mining and Classification on Earnings Call Transcripts</a></p>
+                <h2 id="Some-thoughts-about-linear-regression"><a href="#Some-thoughts-about-linear-regression" class="headerlink" title="Some thoughts about linear regression"></a>Some thoughts about linear regression</h2><h4 id="Starter-Goal-Try-to-predict-some-random-variable-Y"><a href="#Starter-Goal-Try-to-predict-some-random-variable-Y" class="headerlink" title="Starter Goal: Try to predict some random variable Y"></a>Starter Goal: Try to predict some random variable <strong>Y</strong></h4><p>Mean squared error<br>$$MSE([Y-m]^2)$$<br>derives the optimal prediction $\mu = E[Y]$.</p>
+<h4 id="Predict-Y-with-regressor-X"><a href="#Predict-Y-with-regressor-X" class="headerlink" title="Predict Y with regressor X"></a>Predict Y with regressor X</h4><p>$$MSE([Y-f(X)]^2)$$<br>derives the optimal function $f(x) = E[Y|X=x]$</p>
+<h4 id="Suppose-the-function-is-linear"><a href="#Suppose-the-function-is-linear" class="headerlink" title="Suppose the function is linear"></a>Suppose the function is linear</h4><p>Again by minimizing $MSE(\beta) = E([Y-\beta_0-\beta X]^2)$, we derive optimal $\beta$:<br>$$\beta = Var(X)^{-1}Cov(X,Y)$$<br>$$\beta_0 = E[Y] - \beta E[X]$$</p>
+<ul>
+<li>Note: $\beta$ depends on marginal distribution of $X$. If that shifts, $\beta$ will shift <em>unless</em> the regression function is linear.</li>
+</ul>
+<h4 id="Prediciton-and-error"><a href="#Prediciton-and-error" class="headerlink" title="Prediciton and error"></a>Prediciton and error</h4><ul>
+<li>Covariance identity: $Cov(X+Z, Y) = Cov(X,Y)+Cov(Z,Y)$</li>
+<li>prediction error is uncorrelated with regressor:</li>
+</ul>
+<p>$$Cov(Y-\beta X, X) = Cov(Y,X)-Cov([Var(X)^{-1}Cov(X,Y)]X,X)$$</p>
+<p>$$ = Cov(Y,X) - Var(X)^{-1}Cov(X,Y)Var(X)$$</p>
+<ul>
+<li>Expected prediction error $E[Y-X\beta] = 0$</li>
+<li>Although in general $E[Y-X\beta|X=x]\neq 0$</li>
+<li>And $Var[Y-X\beta|X=x_1] \neq Var[Y-X\beta|X=x_2]$</li>
+</ul>
+<h4 id="Estimating-optimal-Linear-Predictor"><a href="#Estimating-optimal-Linear-Predictor" class="headerlink" title="Estimating optimal Linear Predictor"></a>Estimating optimal Linear Predictor</h4><p>To actually estimate $\beta$, we need some assumptions:</p>
+<ul>
+<li>$(X_i, Y_i)$ are independent of each other</li>
+<li>$Cov(X_i, Y_i)$ unchanging</li>
+<li>By CLT, $\frac{1}{n}X^TY \rightarrow Cov[X, Y]$, $\frac{1}{n}X^TX\rightarrow Var(X)$</li>
+</ul>
+<p>So that we have consistent estimator $\hat{\beta} = (X^TX)^{-1}X^TY \rightarrow \beta$</p>
+<p>If more assumptions are made: $Y = X\beta + \epsilon$,</p>
+<p>$$\hat{\beta} = (X^TX)^{-1}X^T(X\beta + \epsilon) = \beta + (X^TX)^{-1}X^T\epsilon$$<br>So we derive:</p>
+<ul>
+<li>$E[\hat{\beta}|X= x] = \beta + (X^TX)^{-1}X^TE[\epsilon] = \beta$</li>
+<li>$Var(\hat{\beta}|X=x) = Var((X^TX)^{-1}X^T\epsilon|X=x) = (X^TX)^{-1}X^T\Sigma(x)X(X^TX)^{-1}$</li>
+</ul>
+<p>where $Var(\epsilon|X=x) = \Sigma(x)$. If errors are uncorrelated and equal diagonal variance,<br>$\Sigma(x) = \sigma^2I$, $Var(\hat{\beta}|X=x) = \sigma^2(x^Tx)^{-1} = \frac{\sigma^2}{n}(x^Tx)^{-1}$</p>
+<p> This tells us that variance of estimated linear regression coefficients goes down as $n$ increases, goes up as $\sigma^2$ increases,<br> and goes down when regressors have more sample variance, less correlated with each others</p>
+<p>More will be updated soon as I figure out more :)</p>
+<p> Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
 
             </div>
 

@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.png"/>
+	<link rel="shortcut icon" href="/img/logo.png">
+	
+			    <title>
+    Yeung's Page
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="yeung, cmu, stat, statml, carnegie mellon" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">YEUNG</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="Resume">
+		                Resume
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/projects/" title="Projects">
+		                Projects
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="" title="Gallary">
+		                Gallary
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/portfolio/" title="Portfolio">
+		                Portfolio
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/yyeung-lam" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="instagram" href="/null" target="_blank" rel="noopener">
+                            <i class="icon fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="medium" href="https://medium.com/@yuyangli_93906" target="_blank" rel="noopener">
+                            <i class="icon fa fa-medium"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://www.researchgate.net/publication/337620784/figure/fig2/AS:830395759198210@1574993185437/An-overview-sketch-of-Support-Vector-Machines-SVM-algorithm-linear-classifier_Q320.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Support Vector Machines</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="Support-Vector-Machines"><a href="#Support-Vector-Machines" class="headerlink" title="Support Vector Machines"></a>Support Vector Machines</h2><h4 id="Constrained-Optimization"><a href="#Constrained-Optimization" class="headerlink" title="Constrained Optimization"></a>Constrained Optimization</h4><p>$\min J(\theta)$ such that $g(\theta) \leq \vec b$</p>
+<h4 id="Quadratic-Programming"><a href="#Quadratic-Programming" class="headerlink" title="Quadratic Programming"></a>Quadratic Programming</h4><ul>
+<li>Quadratic objective function $\mathbf{x}^TQ\mathbf{x} + c^T\mathbf{x}$</li>
+<li>with linear constraints $A\mathbf{x} \leq \vec b$</li>
+<li>Quadratic solver: conjugate gradient, ellipsoid methods, interior points</li>
+<li>Special case: if $Q$ is positive-definite, $\mathbf{a}^TQ\mathbf{a} \geq 0$ for all $\mathbf{a}\in\mathbb{R}^M$, the problem is convex</li>
+</ul>
+<h4 id="SVM-Primal"><a href="#SVM-Primal" class="headerlink" title="SVM Primal"></a>SVM Primal</h4><p><strong>Idea:</strong> To learn a linear separator with maximum margin (so we will get better generalization and less overfitting).<br><strong>Linear separable case</strong></p>
+<ul>
+<li><p>$\max margin$ subject to $y^{(i)}(w^T\mathbf{x}^{(i)}+b) \geq 1 \ \forall i$</p>
+<ul>
+<li><p>Rewrite the decision boundary for perceptron: $y^{(i)}(w^T\mathbf{x}+b)&gt;0$</p>
+</li>
+<li><p>$\exists w,b$ and $c&gt;0$, s.t. $y^{(i)}(w^T\mathbf{x}+b)\geq c$</p>
+</li>
+<li><p>Divide both sides by $c$,we get $\exists \tilde{w}, \tilde{c}$ s.t. $y^{(i)}(\tilde{w}^T\mathbf{x}+\tilde{b})\geq 1$,</p>
+</li>
+</ul>
+</li>
+<li><p>$\vec x_+$ and $\vec x_-$ are support vectors (hypothetical points) with $+/-$ margin away from the linear separator boundary</p>
+</li>
+<li><p>define distance from two hypothetical points to decision boundary $d_+ = \frac{w^T\mathbf{x}<em>++b}{|w|<em>2}$, $d</em>- = -\big(\frac{w^T\mathbf{x}</em>-+b}{|w|_2}\big)$</p>
+</li>
+<li><p>$Width = d_+ + d_- = \frac{w^T\mathbf{x}_+}{|w|<em>2}-\frac{w^T\mathbf{x}</em>-}{|w|_2}$</p>
+</li>
+<li><p>Because of the tight constraints, $d_+=d_- = 1/|w|<em>2\Rightarrow w^T\mathbf{x}</em>++b = 1$, $w^T\mathbf{x}_-+b = -1$</p>
+</li>
+<li><p>$\Rightarrow w^T\mathbf{x}<em>+= 1-b, w^T\mathbf{x}</em>- = -1-b$</p>
+</li>
+<li><p>$$Width\Rightarrow d_+ + d_- = \frac{1}{|w|_2}\big((1-b)-(-1-b)\big) = \frac{2}{|w|_2}$$</p>
+</li>
+<li><p>which is also 2 times the margin, so we can write down margin in terms of $w$</p>
+</li>
+</ul>
+<p><strong>Objective Function:</strong><br>$\max \  margin \leftrightarrow \max\frac{2}{|w|_2} \leftrightarrow \frac{1}{2}\min |w|_2 \leftrightarrow \min \frac{1}{2}|w|^2_2$</p>
+<blockquote>
+<p>This is also the form of a L2 Regularizer_</p>
+</blockquote>
+<p>We can rewrite the Quadratic Program (SVM QP Primal) as $$\min\frac{1}{2}|w|^2_2$$ $$\text{  subject to } y^{(i)}(w^T\mathbf{x}^{(i)}+b)\geq 1 \ \forall i\in {1,…,N}$$</p>
+<h4 id="Lagrange-Multiplier"><a href="#Lagrange-Multiplier" class="headerlink" title="Lagrange Multiplier"></a>Lagrange Multiplier</h4><p><strong>Goal:</strong> Minimize $f(\vec x)$ subject to $g(\vec x)\leq c$</p>
+<ol>
+<li><p>Construct Lagrangian<br>$$L(\vec x, \lambda) = f(\vec x) + \lambda(g(\vec x)-c)$$ subject to $\lambda \geq 0, g(\vec x)\leq c$</p>
+</li>
+<li><p>Solve $\min_{\vec x}\max_{\lambda}L(\vec x,\lambda)$<br>by $\nabla L(\vec x, \lambda) \overset{set}=0$ such that $\lambda \geq 0,g(\vec x)\leq c$<br>$\Rightarrow$ equivalent to solving $\nabla f(\vec x) = \lambda\nabla g(\vec x)$ subject to $\lambda \geq 0, g(\vec x)\leq c$</p>
+</li>
+</ol>
+<h4 id="SVM-Dual"><a href="#SVM-Dual" class="headerlink" title="SVM Dual"></a>SVM Dual</h4><p>Instead of minimizing the primal, we can maximize the dual problem (L2 Regularizer)<br>Hard-margin SVM (Lagrange Dual):</p>
+<p>$$L(\vec w, b, \vec\alpha) = \frac{1}{2}\vec w^T\vec w + \sum_{i=1}^N\alpha_i(y^{(i)}(\vec w\mathbf{x}^{(i)}+b)-1)$$  $$Primal:\min\max L(\vec w, b, \vec\alpha)$$ $$Dual: \max\min L(\vec w, b, \vec\alpha)$$ Prime and Dual are equivalent (proof by Slater’s Condition)<br>Solve for $\vec w, b$ as a function of Lagrangian multipliers $\vec \alpha$,<br>$$\vec w = \sum_{i=1}^N\alpha_iy^{(i)}\mathbf{x}^{(i)}$$ $$ \sum_{i=1}^N\alpha_iy^{(i)} = 0$$<br>Substitute $\vec w$ (a linear combination of feature vectors) back to $L(\vec\alpha)$ and after some algebra, $$L(\alpha) = \sum_{i=1}^N\alpha_i-\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_jy^{(i)}y^{(j)}\mathbf{x}^{(i)T}\mathbf{x}^{(j)}$$<br><strong>SVM Dual Quadratic Program</strong><br>$$\max L(\vec\alpha) \ \ \ s.t.  \ \alpha_i\geq 0, \sum_{i=1}^N\alpha_iy^{(i)} = 0$$ solving SVM using sequential minimal optimization (SMO)</p>
+<ul>
+<li>Always convex</li>
+<li>Support vectors are the points $\mathbf{x}^{(i)}$ for which $\alpha_i\neq 0$</li>
+</ul>
+<h4 id="Soft-Margin-SVM"><a href="#Soft-Margin-SVM" class="headerlink" title="Soft Margin SVM"></a>Soft Margin SVM</h4><p><strong>Idea:</strong> When data is not linearly separable, hard margin SVM’s are extremely sensitive to outliers and are more likely to overfit.</p>
+<ul>
+<li>$C$: leniency weight for slack variables $e_i$<ul>
+<li>$C$ large: overfit, converges to hard margin SVM</li>
+<li>$C$ small: underfit, weight vector converges to $\vec 0$</li>
+</ul>
+</li>
+<li>$e_i$: slack variable, the tolerance of error</li>
+</ul>
+<h4 id="Kernel"><a href="#Kernel" class="headerlink" title="Kernel"></a>Kernel</h4><p><strong>Motivations:</strong> When data is not linearly separable,</p>
+<ul>
+<li>Non-linearly separable data requires high dimensional representation</li>
+<li>Linear restriction…</li>
+<li>Kernel trick allows us to work with high dimensional feature spaces implicitly</li>
+<li>Change linear models to work with non-linear features</li>
+</ul>
+<p><strong>Kernel Methods:</strong> replace dot product of feature vectors $\mathbf{x}^T\mathbf{z}$ with kernel function $k(\mathbf{x}, \mathbf{z}) = \phi(\mathbf{x})^T\phi(\mathbf{z})$</p>
+<ul>
+<li>A kernel function can be any legal definition of a dot product</li>
+<li>Kernel implicitly compute $\phi$ dot product</li>
+</ul>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2021 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

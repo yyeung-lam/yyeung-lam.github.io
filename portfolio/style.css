@@ -1,0 +1,56 @@
+h1, h2, h3 {
+    color: black;
+}
+
+.name {
+    font-size: large;
+    color: lightslategray;
+    font-style: initial;
+    font-variant: small-caps;
+}
+
+.algo {
+    color: indigo;
+}   
+
+#intro {
+    font-style: oblique;
+    font-size: large;
+}
+
+
+
+#wrapper {
+    overflow: hidden;
+}
+
+#links {
+    float: left;
+    padding-right: 5%;
+}
+
+img {
+    width: 15%;
+    padding-left: 5%;
+    float: left;
+}
+
+a {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    font-style: oblique;
+    font-size: x-large;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}

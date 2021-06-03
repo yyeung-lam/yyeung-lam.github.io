@@ -147,13 +147,57 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://liquidplanner-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/HiRes-17.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >projects</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://nickcdryan.files.wordpress.com/2017/04/dists.png?w=640);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >MLE/MAP</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p><a target="_blank" rel="noopener" href="https://www.soccer-alpha.com/">SoccerAlpha: Soccer Prediction by Machine Learning</a></p>
-<p><a target="_blank" rel="noopener" href="https://towardsdatascience.com/text-mining-and-classification-on-earnings-call-transcripts-e63d9856d7d8">Text Mining and Classification on Earnings Call Transcripts</a></p>
+                <h2 id="MLE-MAP"><a href="#MLE-MAP" class="headerlink" title="MLE/MAP"></a>MLE/MAP</h2><h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> Recall probability basics, including but not limited to: discrete and continuous random variables, probability mass functions, probability density functions, events vs. random variables, expectation and variance, joint probability distributions, marginal probabilities, conditional probabilities, independence, conditional independence</li>
+<li><input checked="" disabled="" type="checkbox"> Describe common probability distributions such as the Beta, Dirichlet, Multinomial, Categorical, Gaussian, Exponential, etc.</li>
+<li><input checked="" disabled="" type="checkbox"> State the principle of maximum likelihood estimation and explain what it tries to accomplish</li>
+<li><input checked="" disabled="" type="checkbox"> State the principle of maximum a posteriori estimation and explain why we use it</li>
+<li><input checked="" disabled="" type="checkbox"> Derive the MLE or MAP parameters of a simple model in closed form</li>
+</ul>
+<h4 id="Likelihood-Function"><a href="#Likelihood-Function" class="headerlink" title="Likelihood Function"></a>Likelihood Function</h4><ul>
+<li><p>N samples $D={x^{(i)}}_{i=1}^N$ from i.i.d random variable $X$</p>
+<ul>
+<li>The likelihood function: multiple of pmf/pdf</li>
+</ul>
+</li>
+<li><p>N samples $D={(x^{(i)},y^{(i)})}_{i=1}^N$ from a <em>pair</em> of random variable $X,Y$</p>
+</li>
+<li><p>Conditional likelihood function</p>
+<ul>
+<li>Case 1: $Y$ is discrete, $L(\theta) = \prod p(y^{(i)}|x^{(i)}, \theta)$</li>
+<li>Case 2: $Y$ is continuous, $L(\theta) = \prod f(y^{(i)}|x^{(i)}, \theta)$</li>
+</ul>
+</li>
+<li><p>Joint likelihood function</p>
+<ul>
+<li>Case 1: $X,Y$ is discrete, $L(\theta) = \prod p(x^{(i)}, y^{(i)}|\theta)$</li>
+<li>Case 2: $X,Y$ is continuous, $L(\theta) = \prod f(x^{(i)}, y^{(i)}|\theta)$</li>
+<li>Case 3: $Y$ discrete $X$ continuous, $L(\theta) = \prod f(x^{(i)}|y^{(i)},\alpha)p(y^{(i)}|\beta)$</li>
+<li>Case 4: $Y$ continuous $X$ discrete, $L(\theta) = \prod p(x^{(i)}|y^{(i)}, \alpha)f(y^{(i)}|\beta)$</li>
+</ul>
+</li>
+</ul>
+<h4 id="Maximum-Likelihood-Estimator"><a href="#Maximum-Likelihood-Estimator" class="headerlink" title="Maximum Likelihood Estimator"></a>Maximum Likelihood Estimator</h4><p><strong>Principle of MLE:</strong> Choose the parameters that maximizes the likelihood of the observed data. $$\theta^{MLE} = \argmax\prod_{i=1}^Np(\mathbf{x}^{(i)}|\theta)$$</p>
+<ul>
+<li>MLE tries to allocate <strong>as much</strong> probability mass as possible to the things we observed</li>
+<li>… <strong>at the expense</strong> of the things we have not observed</li>
+<li>Calculated by setting derivative of log-likelihood to zero</li>
+</ul>
+<h4 id="Maximum-a-posteriori-MAP-Estimation"><a href="#Maximum-a-posteriori-MAP-Estimation" class="headerlink" title="Maximum a posteriori (MAP) Estimation"></a>Maximum a posteriori (MAP) Estimation</h4><p><strong>Principle of Maximum a posteriori (MAP) Estimation:</strong> Choose the parameters that maximize the <strong>posterior</strong> of the parameters given the data. $$\theta^{MAP} =\argmax\prod_{i=1}^Np(\theta|\mathbf{x}^{(i)}) = \argmax\prod_{i=1}^N\frac{p(\mathbf{x}^{(i)}|\theta) p(\theta)}{p(\mathbf{x}^{(i)})}= \argmax \prod_{i=1}^Np(\mathbf{x}^{(i)}|\theta)p(\theta)$$</p>
+<ul>
+<li>More smooth estimator than MLE</li>
+</ul>
+<h4 id="Example-of-MLE-MAP"><a href="#Example-of-MLE-MAP" class="headerlink" title="Example of MLE/MAP"></a>Example of MLE/MAP</h4><p>$x^{(i)}\sim Bernoulli(\phi)$, $\phi\sim Beta(\alpha,\beta)$. Let $N_1 = #(x^{(i)} = 1), N_0 = #(x^{(i)} = 0)$</p>
+<ul>
+<li>$\phi^{MLE} = \frac{N_1}{N_1+N_0}$</li>
+<li>$\phi^{MAP} = \frac{N_1’}{N_1’+N_0’} = \frac{N_1+\alpha-1}{N_1+\alpha-1+N_0+\beta-1}$</li>
+</ul>
+<p>Copyright (c) 2020 Copyright Yeung All Rights Reserved.</p>
 
             </div>
 
