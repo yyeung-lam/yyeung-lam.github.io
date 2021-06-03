@@ -11,4 +11,6 @@ Collaboration: All my own work
 
 Hours spent: 5 hours
 
-*Note: The main branch is set to the default branch only for this summer, since I already have another branch (gh-pages) hosting contents of another personal portfolio.*
+## Notice
+I already have a portfolio running on my GitHub Page.
+After opening my GitHub Page, click on "PORTFOLIO" on the navigation bar, or [](https://yyeung-lam.github.io/portfolio) to access the current version of portfolio.
