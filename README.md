@@ -13,4 +13,4 @@ Hours spent: 5 hours
 
 ## Notice
 I already have a portfolio running on my GitHub Page.
-After opening my GitHub Page, click on "PORTFOLIO" on the navigation bar, or [](https://yyeung-lam.github.io/portfolio) to access the current version of portfolio.
+After opening my GitHub Page, click on "PORTFOLIO" on the navigation bar, or [here](https://yyeung-lam.github.io/portfolio) to access the current version of portfolio.
